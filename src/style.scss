@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Antic Didone', serif;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1920px;
+    height: 84px;
+    margin: 0 40px;
+    #logo {
+        display: block;
+        width: 120px;
+        img {
+            width: 100%;
+        }
+    }
+    .header-navigation {
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 18px;
+            display: inline-block;
+            padding: 10px;
+            margin: 10px;
+        }
+    }
+    .header-buttons {
+        display: flex;
+        div {
+            cursor: pointer;
+            padding: 5px;
+            margin: 5px;
+        }
+    }
+}
+
+#slideshow {
+    background-color: #EBA2AF;
+    height: 100vh;
+}
+
+#collection {
+    display: flex;
+    div {
+        width: 640px;
+        height: 880px;
+        border: 1px solid gray;
+        background-color: lightgray;
+        color: lightgray;
+    }
+}
+
+#about-us {
+    height: 1250px;
+    display: flex;
+    border: 1px solid black;
+}
+
+.about-us-container {
+    display: flex;
+
+}
+
+#purchase {
+    height: 770px;
+}
+
+#filler {
+    height: 650px;
+    background-color: rgba(205, 187, 159, 0.5);
+}
+
+/*footer {
+    height: 480px;
+}*/

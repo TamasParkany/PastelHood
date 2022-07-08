@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Antic Didone', serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+}
+
+.header-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1920px;
+  height: 84px;
+  margin: 0 40px;
+}
+
+.header-container #logo {
+  display: block;
+  width: 120px;
+}
+
+.header-container #logo img {
+  width: 100%;
+}
+
+.header-container .header-navigation a {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  display: inline-block;
+  padding: 10px;
+  margin: 10px;
+}
+
+.header-container .header-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header-container .header-buttons div {
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+}
+
+#slideshow {
+  background-color: #EBA2AF;
+  height: 100vh;
+}
+
+#collection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#collection div {
+  width: 640px;
+  height: 880px;
+  border: 1px solid gray;
+  background-color: lightgray;
+  color: lightgray;
+}
+
+#about-us {
+  height: 1250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+}
+
+.about-us-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#purchase {
+  height: 770px;
+}
+
+#filler {
+  height: 650px;
+  background-color: rgba(205, 187, 159, 0.5);
+}
+
+/*footer {
+    height: 480px;
+}*/
+/*# sourceMappingURL=style.css.map */
