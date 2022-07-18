@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
+
 html {
   font-family: 'Antic Didone', serif;
 }
@@ -20,6 +24,7 @@ header {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: white;
+  z-index: 999;
 }
 
 .header-container {
@@ -52,7 +57,6 @@ header {
 }
 
 .header-container .header-navigation a {
-  text-decoration: none;
   color: black;
   font-size: 18px;
   display: inline-block;
@@ -72,46 +76,210 @@ header {
   margin: 5px;
 }
 
-#slideshow {
+#hero {
   background-color: #EBA2AF;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#hero div {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+
+#hero p {
+  color: white;
+  font-size: 96px;
+  text-align: center;
+}
+
+#hero a {
+  display: inline-block;
+  width: 195px;
+  padding: 20px;
+  border: 1px solid white;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+#aboutus {
+  height: 950px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#aboutus a, #aboutus p {
+  line-height: 1.7;
+  letter-spacing: 0.025em;
+}
+
+.aboutus-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.aboutus-container h3 {
+  font-size: 54px;
+}
+
+.aboutus-container p {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.aboutus-container a {
+  display: inline-block;
+  text-align: center;
+  font-size: 13px;
+  padding: 20px;
+  background-color: #333029;
+  color: white;
+  width: 195px;
+  margin-top: 20px;
+}
+
+.aboutus-left {
+  padding: 0 40px 0 20px;
+}
+
+.aboutus-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aboutus-pic1 {
+  width: 347px;
+  height: 520px;
+  background-color: lightgray;
+  -webkit-transform: translate(50px, 50px);
+          transform: translate(50px, 50px);
+}
+
+.aboutus-pic2 {
+  width: 347px;
+  height: 508px;
+  background-color: gray;
 }
 
 #collection {
+  height: 850px;
+  background-color: #ccba9e80;
+}
+
+#gift {
+  height: 950px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-#collection div {
-  width: 640px;
-  height: 880px;
-  border: 1px solid gray;
+#gift a, #gift p {
+  line-height: 1.7;
+  letter-spacing: 0.025em;
+}
+
+.gift-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.gift-container h3 {
+  font-size: 54px;
+}
+
+.gift-container p {
+  font-size: 13px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.gift-container a {
+  display: inline-block;
+  text-align: center;
+  font-size: 13px;
+  padding: 20px;
+  background-color: #333029;
+  color: white;
+  width: 195px;
+  margin-top: 20px;
+}
+
+.gift-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 10px 0 0;
+}
+
+.gift-right {
+  padding: 0 20px 0 40px;
+}
+
+.gift-pic1 {
+  width: 285px;
+  height: 380px;
   background-color: lightgray;
-  color: lightgray;
+  -webkit-transform: translate(50px, 50px);
+          transform: translate(50px, 50px);
 }
 
-#about-us {
-  height: 1250px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  border: 1px solid black;
-}
-
-.about-us-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#purchase {
-  height: 770px;
-}
-
-#filler {
-  height: 650px;
-  background-color: rgba(205, 187, 159, 0.5);
+.gift-pic2 {
+  width: 285px;
+  height: 427px;
+  background-color: gray;
 }
 
 /*footer {

@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+}
+
 html {
     font-family: 'Antic Didone', serif;
 }
@@ -15,6 +19,7 @@ header {
     display: flex;
     justify-content: center;
     background-color: white;
+    z-index: 999;
 }
 
 .header-container {
@@ -35,7 +40,6 @@ header {
     }
     .header-navigation {
         a {
-            text-decoration: none;
             color: black;
             font-size: 18px;
             display: inline-block;
@@ -53,40 +57,153 @@ header {
     }
 }
 
-#slideshow {
+#hero {
     background-color: #EBA2AF;
     height: 100vh;
-}
-
-#collection {
     display: flex;
+    justify-content: center;
+    align-items: center;
     div {
-        width: 640px;
-        height: 880px;
-        border: 1px solid gray;
-        background-color: lightgray;
-        color: lightgray;
+        width: 90%;
+        margin: auto;
+        text-align: center;
+    }
+    p {
+        color: white;
+        font-size: 96px;
+        text-align: center;
+    }
+    a {
+        display: inline-block;
+        width: 195px;
+        padding: 20px;
+        border: 1px solid white;
+        text-align: center;
+        color: white;
+        margin-top: 20px;
     }
 }
 
-#about-us {
-    height: 1250px;
+#aboutus {
+    height: 950px;
     display: flex;
-    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    a, p {
+        line-height: 1.7;
+        letter-spacing: 0.025em;
+    }
 }
 
-.about-us-container {
+.aboutus-container {
     display: flex;
-
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h3 {
+        font-size: 54px;
+    }
+    p {
+        font-size: 13px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    a {
+        display: inline-block;
+        text-align: center;
+        font-size: 13px;
+        padding: 20px;
+        background-color: #333029;
+        color: white;
+        width: 195px;
+        margin-top: 20px;
+    }
 }
 
-#purchase {
-    height: 770px;
+.aboutus-left {
+    padding: 0 40px 0 20px;
 }
 
-#filler {
-    height: 650px;
-    background-color: rgba(205, 187, 159, 0.5);
+.aboutus-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutus-pic1 {
+    width: 347px;
+    height: 520px;
+    background-color: lightgray;
+    transform: translate(50px, 50px);
+}
+.aboutus-pic2 {
+    width: 347px;
+    height: 508px;
+    background-color: gray;
+}
+
+#collection {
+    height: 850px;
+    background-color: #ccba9e80;
+}
+
+#gift {
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a, p {
+        line-height: 1.7;
+        letter-spacing: 0.025em;
+    }
+}
+
+.gift-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    h3 {
+        font-size: 54px;
+    }
+    p {
+        font-size: 13px;
+        text-align: center;
+        margin-top: 20px;
+    }
+    a {
+        display: inline-block;
+        text-align: center;
+        font-size: 13px;
+        padding: 20px;
+        background-color: #333029;
+        color: white;
+        width: 195px;
+        margin-top: 20px;
+    }
+}
+
+.gift-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px 0 0;
+}
+
+.gift-right {
+    padding: 0 20px 0 40px;
+}
+
+.gift-pic1 {
+    width: 285px;
+    height: 380px;
+    background-color: lightgray;
+    transform: translate(50px, 50px);
+}
+.gift-pic2 {
+    width: 285px;
+    height: 427px;
+    background-color: gray;
 }
 
 /*footer {
