@@ -6,6 +6,13 @@
           box-sizing: border-box;
 }
 
+html {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -27,6 +34,8 @@ header {
   left: 0;
   z-index: 9;
   background-color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .header-container {
@@ -55,9 +64,13 @@ header {
           transform: translate(-50%, -50%);
 }
 
+main {
+  overflow-x: hidden;
+}
+
 .banner-container {
   width: 100%;
-  height: 100vh;
+  height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,7 +85,7 @@ header {
 
 .banner-img {
   width: 95%;
-  height: 45%;
+  height: 60%;
   position: relative;
   margin-top: 90px;
 }
@@ -118,7 +131,7 @@ header {
 
 .gallery-container {
   width: 100%;
-  height: 100vh;
+  height: 700px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,7 +149,8 @@ header {
 
 .carousel {
   width: 100%;
-  height: 50%;
+  height: 55%;
+  margin-top: 50px;
 }
 
 .carousel::before {
@@ -154,16 +168,259 @@ header {
 .carousel-cell {
   height: 100%;
   margin-right: 10px;
-  -webkit-transform: scale(0.85);
-          transform: scale(0.85);
 }
 
 .carousel-cell img {
   height: 100%;
+  -webkit-transform: scale(0.85);
+          transform: scale(0.85);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
 }
 
-.carousel-cell.is-selected {
+.carousel-cell.is-selected img {
   -webkit-transform: scale(1);
           transform: scale(1);
+}
+
+.carousel-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: calc(11px + 0.5vw);
+  font-family: "Cantarell", sans-serif;
+  letter-spacing: 0.15em;
+  margin-top: 40px;
+}
+
+.carousel-nav div {
+  display: inline-block;
+}
+
+.carousel-nav-divider {
+  width: 60px;
+  height: 0px;
+  border: 1px solid #1E1E1E;
+  margin: 0 15px;
+}
+
+.motto {
+  width: 100%;
+  min-height: 350px;
+  background-color: #EFEDEA;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.motto p {
+  text-align: center;
+  font-size: calc(30px + 1vw);
+  font-family: "Italiana", serif;
+  color: #1E1E1E;
+  max-width: 85%;
+}
+
+.newsletter {
+  width: 100%;
+  height: 235px;
+  background-color: #1E1E1E;
+  position: relative;
+}
+
+.newsletter form {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.newsletter form input[type="text"], .newsletter form input[type="email"] {
+  width: 60%;
+  height: 40px;
+  border: 1px solid #B8B8B8;
+  border-radius: 0;
+  outline: none;
+  text-align: center;
+  font-size: calc(10px + 0.5vw);
+  font-family: "Cantarell", sans-serif;
+  letter-spacing: 0.15em;
+  background-color: #EFEDEA;
+  color: #1E1E1E;
+  margin: 5px 40px 5px 0;
+}
+
+.newsletter form input[type="submit"] {
+  width: 45%;
+  height: 40px;
+  border: none;
+  border-radius: 0;
+  text-align: center;
+  font-size: calc(10px + 0.5vw);
+  font-family: "Cantarell", sans-serif;
+  letter-spacing: 0.15em;
+  background-color: #242424;
+  color: #fff;
+  margin: 15px 40px 5px 0;
+}
+
+.newsletter p {
+  position: absolute;
+  top: 80px;
+  right: -70px;
+  font-size: calc(40px + 1vw);
+  color: #fff;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-family: "Italiana", serif;
+}
+
+footer {
+  width: 100%;
+  min-height: 400px;
+  background-color: #1E1E1E;
+  color: #fff;
+}
+
+footer .footer-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-header .footer-heading {
+  font-size: calc(40px + 1vw);
+  font-family: "Italiana", serif;
+  margin: 0 30px;
+}
+
+footer .footer-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Cantarell", sans-serif;
+  letter-spacing: 0.15em;
+}
+
+footer .footer-navigation a {
+  color: #fff;
+}
+
+footer .footer-navigation .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: calc(9px + 0.5vw);
+  margin-top: 15px;
+}
+
+footer .footer-navigation .links a {
+  margin: 7.5px;
+}
+
+footer .footer-navigation .socials div {
+  margin: 10px;
+}
+
+footer .footer-navigation .socials .social-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-navigation .socials .social-links a {
+  margin: 5px;
+}
+
+footer .footer-navigation .socials svg {
+  fill: #fff;
+  width: calc(15px + 1vw);
+}
+
+footer .footer-navigation .legal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: calc(6px + 0.5vw);
+  margin-top: 5px;
+}
+
+footer .footer-navigation .legal a {
+  margin: 7.5px;
+}
+
+footer .footer-navigation .legal p {
+  font-size: calc(6px + 0.5vw);
+  margin-top: 15px;
+}
+
+.footer-divider {
+  width: calc(60px + 5vw);
+  height: 0px;
+  border: 1px solid #fff;
 }
 /*# sourceMappingURL=style.css.map */
