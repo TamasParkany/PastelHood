@@ -1,0 +1,136 @@
+$neutral: #fff;
+$primary: #1E1E1E;
+$primary-btn: #242424;
+$secondary: #EFEDEA;
+$secondary-btn: #ADA394;
+$font-decor: 'Italiana', serif;
+$font-func: 'Cantarell', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
+    background-color: $neutral;
+}
+
+.header-container {
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    img {
+        width: 100%;
+    }
+}
+
+.hamburger {
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.banner-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner-img {
+    width: 95%;
+    height: 45%;
+    position: relative;
+    margin-top: 90px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    p {
+        position: absolute;
+        bottom: 60px;
+        left: -50px;
+        font-size: calc(40px + 1vw);
+        color: $neutral;
+        transform: rotate(90deg);
+        font-family: $font-decor;
+    }
+}
+
+.banner-txt {
+    width: 85%;
+    text-align: end;
+    margin-top: 40px;
+    p {
+        font-size: calc(30px + 2vw);
+        color: $primary;
+        font-family: $font-decor;
+    }
+    .banner-link {
+        font-size: calc(10px + 0.75vw);
+        color: $secondary-btn;
+        text-decoration: none;
+        font-family: $font-func;
+        letter-spacing: 0.15em;
+        margin-top: 20px;
+    }
+}
+
+.gallery-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel {
+    width: 100%;
+    height: 50%;
+}
+.carousel::before {
+    content: 'galéria';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 8;
+    font-size: calc(40px + 2vw);
+    font-family: $font-decor;
+}
+.carousel-cell {
+    height: 100%;
+    margin-right: 10px;
+    transform: scale(.85);
+    img {
+        height: 100%;
+    }
+}
+.carousel-cell.is-selected {
+    transform: scale(1);
+}

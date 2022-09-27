@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./images/phico.png" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&family=Italiana&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pastel Hood</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script
+      defer
+      src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"
+    ></script>
+    <script defer src="./js/index.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <img src="./images/t200.png" alt="Logo of Pastel Hood" />
+        </div>
+        <div class="hamburger">
+          <svg
+            width="26"
+            height="20"
+            viewBox="0 0 26 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0.5 6H25.5V7H0.5V6Z" fill="#000000"></path>
+            <path d="M0.5 12H20.5V13H0.5V12Z" fill="#000000"></path>
+          </svg>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="banner-container">
+        <div class="banner-img">
+          <a href="#"
+            ><img
+              src="./images/banner_main.jpg"
+              alt="A model wearing a pink Pastel Hood hoodie."
+          /></a>
+          <p>fall 2022</p>
+        </div>
+        <div class="banner-txt">
+          <p>Style for those who are wild at heart</p>
+          <a href="#"><p class="banner-link">PREJSŤ NA KOLEKCIU</p></a>
+        </div>
+      </section>
+      <section class="gallery-container">
+        <div
+          class="carousel"
+          data-flickity='{ "wrapAround": true, "pageDots": false, "imagesLoaded": true }'
+        >
+          <div class="carousel-cell">
+            <img src="./images/willow_0044.jpg" alt="placeholder" />
+          </div>
+          <div class="carousel-cell">
+            <img src="./images/willow_0046.jpg" alt="placeholder" />
+          </div>
+          <div class="carousel-cell">
+            <img src="./images/willow_0048.jpg" alt="placeholder" />
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
