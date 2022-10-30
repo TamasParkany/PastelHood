@@ -1,134 +1,135 @@
 .contact-faq {
-    width: 100%;
-    min-height: 500px;
-    background-color: $secondary;
+  width: 100%;
+  min-height: 500px;
+  background-color: $secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-container {
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  background-color: $neutral;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0;
+  h2 {
+    color: $primary;
+    position: absolute;
+    top: -38px;
+    font-family: $font-decor;
+    font-size: calc(40px + 0.5vw);
+  }
+  .contact-info {
+    width: 80%;
+    font-size: calc(12px + 0.5vw);
+    font-family: $font-func;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.contact-container {
-    width: 90%;
-    max-width: 500px;
-    position: relative;
-    background-color: $neutral;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: justify;
+    line-height: 2.2;
+    a {
+      color: $primary;
+      font-weight: 700;
+      user-select: text;
+    }
+  }
+  form {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 60px 0;
-    h2 {
-        color: $primary;
-        position: absolute;
-        top: -38px;
-        font-family: $font-decor;
-        font-size: calc(40px + 0.5vw);
-    }
-    .contact-info {
-            width: 80%;
-            font-size: calc(12px + 0.5vw);
-            font-family: $font-func;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-            text-align: justify;
-            line-height: 2.2;
-            a {
-                color: $primary;
-                font-weight: 700;
-            }
-    }
-    form {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    input[type="email"] {
-        width: 80%;
-        height: 50px;
-        border: 1px solid #B8B8B8;
-        border-radius: 0;
-        outline: none;
-        text-align: center;
-        font-size: calc(10px + 0.5vw);
-        font-family: $font-func;
-        letter-spacing: 0.15em;
-        color: $primary;
-        margin-top: 15px;
-    }
-    .text-container {
-        width: 80%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 1px solid #B8B8B8;
-        margin-top: 15px;
-    }
-    textarea {
-        width: 100%;
-        border: none;
-        border-radius: 0;
-        outline: none;
-        text-align: center;
-        resize: none;
-        user-select: auto;
-        font-size: calc(10px + 0.5vw);
-        font-family: $font-func;
-        letter-spacing: 0.15em;
-        color: $primary;
-        margin: 15px;
-    }
-    input[type="submit"] {
-        width: 60%;
-        height: 50px;
-        border: none;
-        border-radius: 0;
-        text-align: center;
-        font-size: calc(10px + 0.5vw);
-        font-family: $font-func;
-        letter-spacing: 0.15em;
-        background-color: $primary-btn;
-        color: $neutral;
-        margin-top: 15px;
-        margin-bottom: 30px;
-    }
+  }
+  input[type="email"] {
+    width: 80%;
+    height: 50px;
+    border: 1px solid #b8b8b8;
+    border-radius: 0;
+    outline: none;
+    text-align: center;
+    font-size: calc(10px + 0.5vw);
+    font-family: $font-func;
+    letter-spacing: 0.15em;
+    color: $primary;
+    margin-top: 15px;
+  }
+  .text-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #b8b8b8;
+    margin-top: 15px;
+  }
+  textarea {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    text-align: center;
+    resize: none;
+    user-select: auto;
+    font-size: calc(10px + 0.5vw);
+    font-family: $font-func;
+    letter-spacing: 0.15em;
+    color: $primary;
+    margin: 15px;
+  }
+  input[type="submit"] {
+    width: 60%;
+    height: 50px;
+    border: none;
+    border-radius: 0;
+    text-align: center;
+    font-size: calc(10px + 0.5vw);
+    font-family: $font-func;
+    letter-spacing: 0.15em;
+    background-color: $primary-btn;
+    color: $neutral;
+    margin-top: 15px;
+    margin-bottom: 30px;
+  }
 }
 
 /* FAQ */
 
 .faq-container {
-    width: 90%;
-    margin: 60px 0;
-    position: relative;
-    background-color: transparent;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    h2 {
-        color: $primary;
-        position: absolute;
-        top: -38px;
-        font-family: $font-decor;
-        font-size: calc(40px + 0.5vw);
-    }
-};
+  width: 90%;
+  margin: 60px 0;
+  position: relative;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h2 {
+    color: $primary;
+    position: absolute;
+    top: -38px;
+    font-family: $font-decor;
+    font-size: calc(40px + 0.5vw);
+  }
+}
 
 .faq-list {
-    margin-top: 40px;
-    .faq-item {
-        margin-bottom: 40px;
-        h3 {
-            font-size: calc(10px + 0.5vw);
-            font-family: $font-func;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            margin-bottom: 20px;
-        }
-        p {
-            font-size: calc(12px + 0.5vw);
-            font-family: $font-func;
-            text-align: justify;
-        }
+  margin-top: 40px;
+  .faq-item {
+    margin-bottom: 40px;
+    h3 {
+      font-size: calc(10px + 0.5vw);
+      font-family: $font-func;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
+    p {
+      font-size: calc(12px + 0.5vw);
+      font-family: $font-func;
+      text-align: justify;
+    }
+  }
 }

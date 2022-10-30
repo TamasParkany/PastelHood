@@ -61,7 +61,7 @@ a {
 
   /*ABOUT*/
   .about-banner h2 {
-    right: -95px;
+    right: -97.5px;
     font-size: calc(60px + 2vw);
   }
   .about-section1 .about-image1 {
@@ -76,11 +76,11 @@ a {
   .about-section2 p {
     top: 75%;
   }
-  .clearfix1 {
+  .about-clearfix1 {
     bottom: calc(115px + 1vh);
     left: calc(-200px - 2vw);
   }
-  .clearfix2 {
+  .about-clearfix2 {
     bottom: calc(80px + 1vh);
     right: calc(-160px - 2vw);
   }

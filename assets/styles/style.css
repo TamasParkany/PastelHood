@@ -45,7 +45,7 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50px;
+  width: calc(50px + 1vw);
 }
 .logo img {
   width: 100%;
@@ -56,6 +56,7 @@ header {
   top: 50%;
   right: 5%;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 
 .nav-overlay {
@@ -226,6 +227,10 @@ main {
   background-color: #1e1e1e;
   margin: 0 15px;
 }
+.carousel-nav .carousel-prev,
+.carousel-nav .carousel-next {
+  cursor: pointer;
+}
 
 .motto {
   width: 100%;
@@ -257,11 +262,12 @@ main {
   justify-content: center;
   align-items: center;
 }
-.newsletter form input[type=text], .newsletter form input[type=email] {
+.newsletter form input[type=text],
+.newsletter form input[type=email] {
   width: 60%;
   max-width: 600px;
   height: 40px;
-  border: 1px solid #B8B8B8;
+  border: 1px solid #b8b8b8;
   border-radius: 0;
   outline: none;
   text-align: center;
@@ -285,6 +291,7 @@ main {
   background-color: #242424;
   color: #fff;
   margin: 15px 0 5px 0;
+  cursor: pointer;
 }
 .newsletter p {
   position: absolute;
@@ -512,6 +519,7 @@ footer .footer-navigation .legal p {
 }
 .product-container .product-size div {
   margin: 0 5px;
+  cursor: pointer;
 }
 .product-container .product-size-info {
   font-family: "Cantarell", sans-serif;
@@ -519,6 +527,7 @@ footer .footer-navigation .legal p {
   letter-spacing: 0.15em;
   margin-bottom: 30px;
   color: rgba(30, 30, 30, 0.5);
+  cursor: pointer;
 }
 .product-container .add-button {
   width: 75%;
@@ -533,6 +542,7 @@ footer .footer-navigation .legal p {
   letter-spacing: 0.15em;
   border: none;
   margin-bottom: 30px;
+  cursor: pointer;
 }
 .product-container .product-description {
   width: 75%;
@@ -742,6 +752,8 @@ footer .footer-navigation .legal p {
   top: 7.5%;
   left: -15%;
   width: 100%;
+  max-width: 750px;
+  max-width: 750px;
   height: 45%;
 }
 .about-section2 .about-image2 img {
@@ -773,14 +785,14 @@ footer .footer-navigation .legal p {
   position: relative;
 }
 
-.clearfix1 {
+.about-clearfix1 {
   background: transparent;
   position: absolute;
   bottom: 115px;
   left: -200px;
 }
 
-.clearfix2 {
+.about-clearfix2 {
   background: transparent;
   position: absolute;
   bottom: 80px;
@@ -835,6 +847,10 @@ footer .footer-navigation .legal p {
 .contact-container .contact-info a {
   color: #1e1e1e;
   font-weight: 700;
+  -webkit-user-select: text;
+     -moz-user-select: text;
+      -ms-user-select: text;
+          user-select: text;
 }
 .contact-container form {
   width: 100%;
@@ -845,7 +861,7 @@ footer .footer-navigation .legal p {
 .contact-container input[type=email] {
   width: 80%;
   height: 50px;
-  border: 1px solid #B8B8B8;
+  border: 1px solid #b8b8b8;
   border-radius: 0;
   outline: none;
   text-align: center;
@@ -860,7 +876,7 @@ footer .footer-navigation .legal p {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #B8B8B8;
+  border: 1px solid #b8b8b8;
   margin-top: 15px;
 }
 .contact-container textarea {
@@ -961,7 +977,7 @@ footer .footer-navigation .legal p {
   }
   /*ABOUT*/
   .about-banner h2 {
-    right: -95px;
+    right: -97.5px;
     font-size: calc(60px + 2vw);
   }
   .about-section1 .about-image1 {
@@ -976,11 +992,11 @@ footer .footer-navigation .legal p {
   .about-section2 p {
     top: 75%;
   }
-  .clearfix1 {
+  .about-clearfix1 {
     bottom: calc(115px + 1vh);
     left: calc(-200px - 2vw);
   }
-  .clearfix2 {
+  .about-clearfix2 {
     bottom: calc(80px + 1vh);
     right: calc(-160px - 2vw);
   }

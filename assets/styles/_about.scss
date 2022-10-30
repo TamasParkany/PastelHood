@@ -114,6 +114,8 @@
     top: 7.5%;
     left: -15%;
     width: 100%;
+    max-width: 750px;
+    max-width: 750px;
     height: 45%;
     img {
       width: 100%;
@@ -145,14 +147,14 @@
   position: relative;
 }
 
-.clearfix1 {
+.about-clearfix1 {
   background: transparent;
   position: absolute;
   bottom: 115px;
   left: -200px;
 }
 
-.clearfix2 {
+.about-clearfix2 {
   background: transparent;
   position: absolute;
   bottom: 80px;

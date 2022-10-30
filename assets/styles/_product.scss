@@ -1,167 +1,170 @@
 .product-container {
+  width: 100%;
+  .product-carousel {
     width: 100%;
-    .product-carousel {
+    margin-bottom: 20px;
+    img {
+      width: 100%;
+    }
+  }
+  .product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .product-name {
+    font-family: $font-decor;
+    font-size: calc(22px + 0.5vw);
+    letter-spacing: 0.15em;
+    color: $primary;
+  }
+  .product-blobs {
+    display: flex;
+    margin: 8px 0;
+    .blob {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      z-index: 5;
+      &-l {
+        transform: translateX(5px);
+        z-index: 4;
+      }
+      &-r {
+        transform: translateX(-5px);
+        z-index: 6;
+      }
+    }
+  }
+  .product-price {
+    font-family: $font-func;
+    font-size: calc(14px + 0.5vw);
+    letter-spacing: 0.15em;
+    margin-bottom: 30px;
+    color: $primary;
+  }
+  .product-size {
+    display: flex;
+    font-family: $font-func;
+    font-size: calc(16px + 0.5vw);
+    margin-bottom: 20px;
+    letter-spacing: 0.15em;
+    div {
+      margin: 0 5px;
+      cursor: pointer;
+    }
+  }
+  .product-size-info {
+    font-family: $font-func;
+    font-size: calc(10px + 0.5vw);
+    letter-spacing: 0.15em;
+    margin-bottom: 30px;
+    color: rgba(30, 30, 30, 0.5);
+    cursor: pointer;
+  }
+  .add-button {
+    width: 75%;
+    height: 40px;
+    background-color: $primary-btn;
+    color: $neutral;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-func;
+    font-size: calc(10px + 0.5vw);
+    letter-spacing: 0.15em;
+    border: none;
+    margin-bottom: 30px;
+    cursor: pointer;
+  }
+  .product-description {
+    width: 75%;
+    font-family: $font-func;
+    font-size: calc(12px + 0.5vw);
+    text-align: justify;
+    margin-bottom: 30px;
+  }
+  .product-accordion {
+    width: 75%;
+    font-family: $font-func;
+    font-size: calc(10px + 0.5vw);
+    color: $primary;
+    border-top: 1px solid $primary;
+    border-bottom: 1px solid $primary;
+    margin-bottom: 50px;
+  }
+  .accordion {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $primary;
+    background-color: $neutral;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    span {
+      font-size: calc(15px + 0.5vw);
+      margin-right: 2px;
+    }
+  }
+  .acc-space {
+    margin-top: 10px;
+  }
+  .panel {
+    background-color: $neutral;
+    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.3s;
+  }
+  .product-alternatives {
+    width: 80%;
+    p {
+      font-family: $font-decor;
+      font-size: calc(16px + 1vw);
+      margin-bottom: 10px;
+    }
+    .alternatives-container {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+    .alternative {
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      img {
         width: 100%;
-        margin-bottom: 20px;
-        img {
-            width: 100%;
-        }
-    }
-    .product-info {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .product-name {
+        margin-bottom: 10px;
+      }
+      &-name {
         font-family: $font-decor;
-        font-size: calc(22px + 0.5vw);
-        letter-spacing: 0.15em;
-        color: $primary;
-    }
-    .product-blobs {
-        display: flex;
-        margin: 8px 0;
-        .blob {
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            z-index: 5;
-            &-l {
-                transform: translateX(5px);
-                z-index: 4;
-            }
-            &-r {
-                transform: translateX(-5px);
-                z-index: 6;
-            }
-        }
-    }
-    .product-price {
-        font-family: $font-func;
         font-size: calc(14px + 0.5vw);
-        letter-spacing: 0.15em;
-        margin-bottom: 30px;
-        color: $primary;
-    }
-    .product-size {
-        display: flex;
+        margin-bottom: 5px;
+      }
+      &-price {
         font-family: $font-func;
-        font-size: calc(16px + 0.5vw);
+        font-size: calc(10px + 0.5vw);
         margin-bottom: 20px;
-        letter-spacing: 0.15em;
-        div {
-            margin: 0 5px;
-        }
-    }
-    .product-size-info {
-        font-family: $font-func;
-        font-size: calc(10px + 0.5vw);
-        letter-spacing: 0.15em;
-        margin-bottom: 30px;
-        color: rgba(30, 30, 30, 0.5);
-    }
-    .add-button {
-        width: 75%;
-        height: 40px;
-        background-color: $primary-btn;
-        color: $neutral;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-family: $font-func;
-        font-size: calc(10px + 0.5vw);
-        letter-spacing: 0.15em;
-        border: none;
-        margin-bottom: 30px;
-    }
-    .product-description {
-        width: 75%;
-        font-family: $font-func;
-        font-size: calc(12px + 0.5vw);
-        text-align: justify;
-        margin-bottom: 30px;
-    }
-    .product-accordion {
-        width: 75%;
-        font-family: $font-func;
-        font-size: calc(10px + 0.5vw);
-        color: $primary;
-        border-top: 1px solid $primary;
-        border-bottom: 1px solid $primary;
-        margin-bottom: 50px;
-    }
-    .accordion {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        color: $primary;
-        background-color: $neutral;
-        cursor: pointer;
-        border: none;
-        outline: none;
-        span {
-            font-size: calc(15px + 0.5vw);
-            margin-right: 2px;
-        }
       }
-      .acc-space {
-        margin-top: 10px;
-      }
-      .panel {
-        background-color: $neutral;
-        display: none;
-        overflow: hidden;
-        max-height: 0;
-        transition: max-height 0.3s;
-      }
-    .product-alternatives {
-        width: 80%;
-        p {
-            font-family: $font-decor;
-            font-size: calc(16px + 1vw);
-            margin-bottom: 10px;
-        }
-        .alternatives-container {
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-        }
-        .alternative {
-            width: 45%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            img {
-                width: 100%;
-                margin-bottom: 10px;
-            }
-            &-name {
-                font-family: $font-decor;
-                font-size: calc(14px + 0.5vw);
-                margin-bottom: 5px;
-            }
-            &-price {
-                font-family: $font-func;
-                font-size: calc(10px + 0.5vw);
-                margin-bottom: 20px;
-            }
-        }
     }
+  }
 }
 
 .selected-size {
-    border-bottom: 2px solid $primary;
+  border-bottom: 2px solid $primary;
 }
 
 .flickity-page-dots {
-    bottom: 5px;
-    .dot {
-        height: 2px;
-        width: 15px;
-        margin: 2px;
-        border-radius: 0;
-        background-color: $neutral;
-      }
+  bottom: 5px;
+  .dot {
+    height: 2px;
+    width: 15px;
+    margin: 2px;
+    border-radius: 0;
+    background-color: $neutral;
   }
+}

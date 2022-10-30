@@ -33,6 +33,39 @@ const flkty = new Flickity(carousel, {
   prevNextButtons: false,
 });
 
+//SIZE-SELECTOR
+const sizeCheck = Array.from(document.getElementsByClassName("size"));
+
+function sizeSelect(e) {
+  sizeCheck.forEach((size) => {
+    size.classList.remove("selected-size");
+  });
+
+  e.target.classList.add("selected-size");
+}
+
+sizeCheck.forEach((size) => {
+  size.addEventListener("click", sizeSelect);
+});
+
+//ADD-TO-CART
+document
+  .getElementsByClassName("add-button")[0]
+  .addEventListener("click", () => {
+    console.log(
+      `Added an ${
+        document.getElementsByClassName("selected-size")[0].dataset.size
+      } sized Hoodie to your Cart!`
+    );
+  });
+
+//SIZE-CHECK
+document
+  .getElementsByClassName("product-size-info")[0]
+  .addEventListener("click", () => {
+    console.log("chest: x, waist: y, sleeve: z");
+  });
+
 //ACCORDION
 const acc = document.getElementsByClassName("accordion");
 for (let i = 0; i < acc.length; i++) {
