@@ -1,35 +1,13 @@
-$neutral: #fff;
-$primary: #1E1E1E;
-$primary-btn: #242424;
-$secondary: #EFEDEA;
-$secondary-btn: #ADA394;
-$font-decor: 'Italiana', serif;
-$font-func: 'Cantarell', sans-serif;
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-html {
-    user-select: none;
-}
-
-a {
-    text-decoration: none;
-}
-
 header {
     width: 100%;
     height: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
-    z-index: 9;
+    z-index: 8;
     background-color: $neutral;
     transition: all .3s;
 }
@@ -57,33 +35,90 @@ header {
     transform: translate(-50%, -50%);
 }
 
+.nav-overlay {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    z-index: 9;
+    background-color: rgba(30, 30, 30, 0.95);
+    transition: left .3s;
+    .nav-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: $font-func;
+            font-size: calc(20px + 1vw);
+            letter-spacing: 0.15em;
+            a {
+                color: $neutral;
+                margin-bottom: 10px;
+            }
+            .socials {
+                margin-top: 40px;
+                div {
+                    margin: 10px;
+                }
+                .social-links {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    a {
+                        margin: 5px;
+                    }
+                }
+                svg {
+                    fill: $neutral;
+                    width: calc(20px + 1vw);
+                }
+            }
+        }
+        .nav-close {
+            position: absolute;
+            top: 25px;
+            right: 35px;
+            color: $neutral;
+            font-family: $font-func;
+            font-size: calc(24px + 1vw);
+        }
+    }
+}
+
 main {
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .banner-container {
     width: 100%;
-    height: 600px;
+    height: 70vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .banner-img {
-    width: 95%;
-    height: 60%;
+    width: 92.5%;
+    height: 70%;
     position: relative;
-    margin-top: 90px;
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+        object-position: 100% 10%;
     }
     p {
         position: absolute;
-        bottom: 60px;
-        left: -50px;
-        font-size: calc(40px + 1vw);
+        bottom: 65px;
+        left: -45px;
+        font-size: calc(40px + 2vw);
         color: $neutral;
         transform: rotate(90deg);
         font-family: $font-decor;
@@ -111,7 +146,7 @@ main {
 
 .gallery-container {
     width: 100%;
-    height: 700px;
+    height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -129,7 +164,7 @@ main {
     top: -10px;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 8;
+    z-index: 7;
     font-size: calc(40px + 2vw);
     font-family: $font-decor;
 }
@@ -138,7 +173,7 @@ main {
     margin-right: 10px;
     img {
         height: 100%;
-        transform: scale(.85);
+        transform: scale(.8);
         transition: transform .3s;
     }
 }
@@ -160,8 +195,8 @@ main {
     }
     &-divider {
         width: 60px;
-        height: 0px;
-        border: 1px solid $primary;
+        height: 1px;
+        background-color: $primary;
         margin: 0 15px;
     }
 }
@@ -184,7 +219,7 @@ main {
 
 .newsletter {
     width: 100%;
-    height: 235px;
+    height: 275px;
     background-color: $primary;
     position: relative;
     form {
@@ -196,6 +231,7 @@ main {
         align-items: center;
         input[type="text"], input[type="email"] {
             width: 60%;
+            max-width: 600px;
             height: 40px;
             border: 1px solid #B8B8B8;
             border-radius: 0;
@@ -206,10 +242,11 @@ main {
             letter-spacing: 0.15em;
             background-color: $secondary;
             color: $primary;
-            margin: 5px 40px 5px 0;
+            margin: 5px 0;
         }
         input[type="submit"] {
             width: 45%;
+            max-width: 400px;
             height: 40px;
             border: none;
             border-radius: 0;
@@ -219,12 +256,12 @@ main {
             letter-spacing: 0.15em;
             background-color: $primary-btn;
             color: $neutral;
-            margin: 15px 40px 5px 0;
+            margin: 15px 0 5px 0;
         }
     }
     p {
         position: absolute;
-        top: 80px;
+        top: 100px;
         right: -70px;
         font-size: calc(40px + 1vw);
         color: $neutral;
@@ -293,6 +330,7 @@ footer {
             align-items: center;
             font-size: calc(6px + 0.5vw);
             margin-top: 5px;
+            margin-bottom: 30px;
             a {
                 margin: 7.5px;
             }

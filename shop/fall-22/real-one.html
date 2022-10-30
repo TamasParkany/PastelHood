@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="shortcut icon"
-      href="./assets/images/phico.png"
+      href="/assets/images/phico.png"
       type="image/x-icon"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,18 +15,18 @@
       href="https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&family=Italiana&family=Tenor+Sans&display=swap"
       rel="stylesheet"
     />
-    <title>Pastel Hood</title>
+    <title>Pink/Yellow/Magenta - Pastel Hood</title>
     <link rel="stylesheet" href="/assets/temp/flickity.min.css" />
     <link rel="stylesheet" href="/assets/styles/style.css" />
     <script defer src="/assets/temp/flickity.pkgd.min.js"></script>
-    <script defer src="/index.js"></script>
+    <script defer src="../product.js"></script>
   </head>
   <body>
     <header>
       <div class="header-container">
         <div class="logo">
           <a href="/">
-            <img src="./assets/images/t200.png" alt="Logo of Pastel Hood" />
+            <img src="/assets/images/t200.png" alt="Logo of Pastel Hood" />
           </a>
         </div>
         <div class="hamburger">
@@ -78,53 +78,77 @@
       </div>
     </section>
     <main>
-      <section class="banner-container">
-        <div class="banner-img">
-          <a href="/shop/index.html"
-            ><img
-              src="./assets/images/group.JPG"
-              alt="A model wearing a pink Pastel Hood hoodie."
-          /></a>
-          <p>fall 2022</p>
+      <section class="product-container">
+        <div class="product-carousel">
+          <img
+            src="/assets/images/real-alt.JPG"
+            alt="A model wearing a pink Pastel Hood hoodie."
+          />
+          <img
+            src="/assets/images/real-alt.JPG"
+            alt="A model wearing a pink Pastel Hood hoodie."
+          />
+          <img
+            src="/assets/images/real-alt.JPG"
+            alt="A model wearing a pink Pastel Hood hoodie."
+          />
         </div>
-        <div class="banner-txt">
-          <p>Style for those who are wild at heart</p>
-          <a href="/shop/index.html"
-            ><p class="banner-link">PREJSŤ NA KOLEKCIU</p></a
-          >
-        </div>
-      </section>
-      <section class="gallery-container">
-        <div class="carousel">
-          <div class="carousel-cell">
-            <img src="./assets/images/rand1.JPG" alt="placeholder" />
+        <div class="product-info">
+          <p class="product-name">"Real One"</p>
+          <div class="product-blobs">
+            <div class="blob blob-l" style="background: #9dd3c6"></div>
+            <div class="blob" style="background: #7fc3f4"></div>
+            <div class="blob blob-r" style="background: #f8c7ea"></div>
           </div>
-          <div class="carousel-cell">
-            <img src="./assets/images/rand11.JPG" alt="placeholder" />
+          <p class="product-price">70.99€</p>
+          <div class="product-size">
+            <div>S</div>
+            <div class="selected-size">M</div>
+            <div>L</div>
+            <div>XL</div>
           </div>
-          <div class="carousel-cell">
-            <img src="./assets/images/rand2.JPG" alt="placeholder" />
+          <p class="product-size-info">INFORMÁCIE O VEĽKOSTI</p>
+          <button class="add-button">PRIDAŤ DO KOŠÍKA</button>
+          <p class="product-description">
+            Táto jedinečná mikina rozžiary nielen váš deň, ale aj okoloidúcich
+            ľudí, ktorý pri pohlade na ňu zistia o čo vlastne v živote
+            prichádzajú.
+            <br />
+            <br />
+            Vaše bolesti krížov síce zázračne neodídu, ale za to sa budete cítit
+            aspoň o 5 až 10 rokov mentálne mladší.
+          </p>
+          <div class="product-accordion">
+            <div class="accordion">
+              <p>MATERIÁL A STAROSTLIVOSŤ</p>
+              <span>+</span>
+            </div>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+            <div class="accordion acc-space">
+              <p>DORUČENIE A VRÁTENIE</p>
+              <span>+</span>
+            </div>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
           </div>
-          <div class="carousel-cell">
-            <img src="./assets/images/rand22.JPG" alt="placeholder" />
+          <div class="product-alternatives">
+            <p>Čo tak iná farba?</p>
+            <div class="alternatives-container">
+              <div class="alternative">
+                <img src="/assets/images/slasher.JPG" />
+                <p class="alternative-name">"Slasher"</p>
+                <p class="alternative-price">70.99€</p>
+              </div>
+              <div class="alternative">
+                <img src="/assets/images/lost.JPG" />
+                <p class="alternative-name">"Lost Without U"</p>
+                <p class="alternative-price">70.99€</p>
+              </div>
+            </div>
           </div>
-          <div class="carousel-cell">
-            <img src="./assets/images/rand3.JPG" alt="placeholder" />
-          </div>
-          <div class="carousel-cell">
-            <img src="./assets/images/rand33.JPG" alt="placeholder" />
-          </div>
-          <div class="carousel-cell">
-            <img src="./assets/images/rand4.JPG" alt="placeholder" />
-          </div>
-          <div class="carousel-cell">
-            <img src="./assets/images/rand44.JPG" alt="placeholder" />
-          </div>
-        </div>
-        <div class="carousel-nav">
-          <div class="carousel-prev">VZAD</div>
-          <div class="carousel-nav-divider"></div>
-          <div class="carousel-next">ĎALEJ</div>
         </div>
       </section>
       <section class="motto">

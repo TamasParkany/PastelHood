@@ -1,0 +1,113 @@
+@font-face {
+  font-family: Italiana-Plus;
+  src: url(/assets/fonts/Italiana-Regular-Plus.ttf);
+}
+
+$neutral: #fff;
+$primary: #1e1e1e;
+$primary-btn: #242424;
+$secondary: #efedea;
+$secondary-btn: #ada394;
+$font-decor: "Italiana-Plus", serif;
+$font-func: "Cantarell", sans-serif;
+$font-text: "Tenor Sans", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+@import "main";
+@import "shop";
+@import "product";
+@import "about";
+@import "contact";
+
+/*TABLET*/
+@media only screen and (min-width: 750px) {
+  .banner-container {
+    height: 60vh;
+  }
+  .banner-img img {
+    object-position: 100% 5%;
+  }
+  .banner-img p {
+    left: -65px;
+    bottom: 85px;
+    font-size: calc(40px + 3vw);
+  }
+
+  /*SHOP*/
+  .shop-banner-container {
+    height: 70vh;
+  }
+  .shop-banner-img img {
+    object-position: 100% 30%;
+  }
+  .shop-banner-img p {
+    left: -60px;
+    bottom: 100px;
+    font-size: calc(40px + 4vw);
+  }
+
+  /*ABOUT*/
+  .about-banner h2 {
+    right: -95px;
+    font-size: calc(60px + 2vw);
+  }
+  .about-section1 .about-image1 {
+    height: 60%;
+  }
+  .about-section1 p {
+    top: 60%;
+  }
+  .about-section2 .about-image2 {
+    height: 60%;
+  }
+  .about-section2 p {
+    top: 75%;
+  }
+  .clearfix1 {
+    bottom: calc(115px + 1vh);
+    left: calc(-200px - 2vw);
+  }
+  .clearfix2 {
+    bottom: calc(80px + 1vh);
+    right: calc(-160px - 2vw);
+  }
+}
+
+/*DESKTOP*/
+@media only screen and (min-width: 1300px) {
+  .banner-container {
+    height: 100vh;
+  }
+  .banner-img p {
+    left: -90px;
+    bottom: 140px;
+    font-size: calc(40px + 4vw);
+  }
+  .gallery-container {
+    height: 100vh;
+  }
+
+  /*SHOP*/
+  .shop-banner-container {
+    height: 80vh;
+  }
+  .shop-banner-img p {
+    left: -90px;
+    bottom: 140px;
+  }
+
+  /*ABOUT*/
+}
