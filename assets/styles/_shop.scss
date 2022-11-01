@@ -34,9 +34,6 @@
   width: 75%;
   max-width: 400px;
   display: block;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 50px;
   &:nth-child(odd) {
     margin-left: auto;
@@ -55,6 +52,7 @@
     font-size: calc(40px + 0.5vw);
     letter-spacing: 0.15em;
     color: $primary;
+    font-weight: 400;
   }
   .name-l {
     top: 50%;

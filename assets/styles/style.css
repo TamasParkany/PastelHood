@@ -54,7 +54,7 @@ header {
 .hamburger {
   position: absolute;
   top: 50%;
-  right: 5%;
+  right: 3vw;
   transform: translate(-50%, -50%);
   opacity: 1;
   cursor: pointer;
@@ -62,13 +62,14 @@ header {
 
 .nav-overlay {
   width: 100%;
+  max-width: 450px;
   height: 100vh;
   position: fixed;
   top: 0;
-  left: -100vw;
+  right: -100vw;
   z-index: 9;
   background-color: rgba(30, 30, 30, 0.95);
-  transition: left 0.3s;
+  transition: right 0.3s;
 }
 .nav-overlay .nav-container {
   width: 100%;
@@ -111,10 +112,10 @@ header {
 .nav-overlay .nav-container .nav-close {
   position: absolute;
   top: 25px;
-  right: 35px;
+  right: 5vw;
   color: #fff;
   font-family: "Cantarell", sans-serif;
-  font-size: calc(24px + 1vw);
+  font-size: calc(20px + 1vw);
   cursor: pointer;
 }
 
@@ -419,9 +420,6 @@ footer .footer-navigation .legal p {
   width: 75%;
   max-width: 400px;
   display: block;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 50px;
 }
 .product-list-item:nth-child(odd) {
@@ -442,6 +440,7 @@ footer .footer-navigation .legal p {
   font-size: calc(40px + 0.5vw);
   letter-spacing: 0.15em;
   color: #1e1e1e;
+  font-weight: 400;
 }
 .product-list-item .name-l {
   top: 50%;
@@ -654,6 +653,113 @@ footer .footer-navigation .legal p {
   margin: 2px;
   border-radius: 0;
   background-color: #fff;
+}
+
+.size-guide-overlay {
+  width: 100%;
+  max-width: 450px;
+  height: 100vh;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9;
+  display: none;
+  transition: all 0.3s;
+}
+.size-guide-overlay .size-guide-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.size-guide-overlay .size-guide-image {
+  width: 350px;
+  height: 505px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.size-guide-overlay .size-guide-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.size-guide-overlay .size-guide-image #chest {
+  position: absolute;
+  top: 241px;
+  left: 43px;
+  font-family: "Cantarell", sans-serif;
+  font-size: 12px;
+  background-color: black;
+  border-radius: 10px;
+  color: #fff;
+}
+.size-guide-overlay .size-guide-image #waist {
+  position: absolute;
+  top: 436px;
+  left: 43px;
+  font-family: "Cantarell", sans-serif;
+  font-size: 12px;
+  background-color: black;
+  border-radius: 10px;
+  color: #fff;
+}
+.size-guide-overlay .size-guide-image #length {
+  position: absolute;
+  top: 301px;
+  left: 177px;
+  font-family: "Cantarell", sans-serif;
+  font-size: 12px;
+  background-color: black;
+  border-radius: 10px;
+  color: #fff;
+}
+.size-guide-overlay .size-guide-image #sleeve {
+  position: absolute;
+  top: 198px;
+  left: 295px;
+  font-family: "Cantarell", sans-serif;
+  font-size: 12px;
+  background-color: black;
+  border-radius: 10px;
+  color: #fff;
+}
+.size-guide-overlay .size-guide-image::before {
+  content: "veľkostná tabulka";
+  position: absolute;
+  width: 450px;
+  text-align: center;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 7;
+  font-size: calc(40px + 0.5vw);
+  font-family: "Italiana-Plus", serif;
+}
+.size-guide-overlay .size-guide-selector {
+  display: flex;
+  font-family: "Cantarell", sans-serif;
+  font-size: calc(20px + 0.5vw);
+  margin-top: 40px;
+  letter-spacing: 0.15em;
+}
+.size-guide-overlay .size-guide-selector div {
+  margin: 0 10px;
+  cursor: pointer;
+}
+.size-guide-overlay .size-guide-close {
+  position: absolute;
+  top: 25px;
+  right: 5vw;
+  color: #1e1e1e;
+  font-family: "Cantarell", sans-serif;
+  font-size: calc(20px + 1vw);
+  cursor: pointer;
 }
 
 .about-banner {
@@ -1045,6 +1151,26 @@ footer .footer-navigation .legal p {
   .shop-banner-img p {
     left: -90px;
     bottom: 140px;
+  }
+  .product-list-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+  }
+  .product-list-item:nth-child(odd) {
+    margin-left: 0;
+    transform: translateY(50px);
+  }
+  .product-list-item .name-l {
+    left: -140px;
+  }
+  .product-list-item .name-ll {
+    left: -220px;
+  }
+  .product-list-item .name-r {
+    right: auto;
+    left: -120px;
+    transform: rotate(90deg);
   }
   /*ABOUT*/
 }/*# sourceMappingURL=style.css.map */

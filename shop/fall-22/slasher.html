@@ -15,17 +15,19 @@
       href="https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&family=Italiana&family=Tenor+Sans&display=swap"
       rel="stylesheet"
     />
-    <title>Obchod - Pastel Hood</title>
+    <title>Slasher - Pastel Hood</title>
+    <link rel="stylesheet" href="/assets/temp/flickity.min.css" />
     <link rel="stylesheet" href="/assets/styles/style.css" />
-    <script defer src="/index.js"></script>
-    <script defer src="./shop.js"></script>
+    <script defer src="/assets/temp/flickity.pkgd.min.js"></script>
+    <script defer src="../product.js"></script>
+    <script defer src="../flkty-product.js"></script>
   </head>
   <body>
     <header>
       <div class="header-container">
         <div class="logo">
           <a href="/">
-            <img src="/assets/images/t200.png" alt="Pastel Hood Logo" />
+            <img src="/assets/images/t200.png" alt="Logo of Pastel Hood" />
           </a>
         </div>
         <div class="hamburger">
@@ -42,7 +44,7 @@
         </div>
       </div>
     </header>
-    <div class="nav-overlay">
+    <section class="nav-overlay">
       <div class="nav-container">
         <nav>
           <a href="/">DOMOV</a>
@@ -75,78 +77,128 @@
         </nav>
         <div class="nav-close">X</div>
       </div>
+    </section>
+    <div class="size-guide-overlay">
+      <div class="size-guide-container">
+        <div class="size-guide-image">
+          <img src="/assets/images/size_guide.jpg" alt="" />
+          <div id="chest">--cm</div>
+          <div id="waist">--cm</div>
+          <div id="length">--cm</div>
+          <div id="sleeve">--cm</div>
+        </div>
+        <div class="size-guide-selector">
+          <div data-size-table="XS" class="size-selector">XS</div>
+          <div data-size-table="S" class="size-selector">S</div>
+          <div data-size-table="M" class="size-selector">M</div>
+          <div data-size-table="L" class="size-selector">L</div>
+          <div data-size-table="XL" class="size-selector">XL</div>
+          <div data-size-table="XXL" class="size-selector">XXL</div>
+        </div>
+        <div class="size-guide-close">X</div>
+      </div>
     </div>
     <main>
-      <div class="shop-banner-container">
-        <div class="shop-banner-img">
-          <img src="/assets/images/banner_shop.JPG" alt="" />
-          <p>fall 2022</p>
+      <section class="product-container">
+        <div class="product-carousel">
+          <img
+            src="/assets/images/slasher/slasher_front_f.JPG"
+            alt="A model wearing a pink Pastel Hood hoodie."
+          />
+          <img
+            src="/assets/images/slasher/slasher_back_f.JPG"
+            alt="A model wearing a pink Pastel Hood hoodie."
+          />
+          <img
+            src="/assets/images/slasher/slasher_front_m.JPG"
+            alt="A model wearing a pink Pastel Hood hoodie."
+          />
+          <img
+            src="/assets/images/slasher/slasher_back_m.JPG"
+            alt="A model wearing a pink Pastel Hood hoodie."
+          />
+          <img
+            src="/assets/images/slasher/slasher_group.JPG"
+            alt="A model wearing a pink Pastel Hood hoodie."
+          />
+          <img
+            src="/assets/images/slasher/slasher_group_alt.JPG"
+            alt="A model wearing a pink Pastel Hood hoodie."
+          />
         </div>
-      </div>
-      <section class="product-list-container">
-        <div class="product-list-item">
-          <div class="product-image">
-            <a href="./fall-22/real-one.html"
-              ><img
-                id="image1"
-                src="/assets/images/real/real_front.JPG"
-                alt="The Real One Hoodie by Pastel Hood"
-            /></a>
-            <h2 class="product-name name-l">"Real One"</h2>
-          </div>
-          <div class="product-blobs">
-            <div class="blob blob-l" style="background: #9dd3c6"></div>
-            <div class="blob" style="background: #7fc3f4"></div>
-            <div class="blob blob-r" style="background: #f8c7ea"></div>
-          </div>
-          <p class="product-price">70.99€</p>
-        </div>
-        <div class="product-list-item">
-          <div class="product-image">
-            <a href="./fall-22/slasher.html"
-              ><img
-                id="image2"
-                src="/assets/images/slasher/slasher_front_f.JPG"
-                alt="The Slasher Hoodie by Pastel Hood"
-            /></a>
-            <h2 class="product-name name-r">"Slasher"</h2>
-          </div>
+        <div class="product-info">
+          <p class="product-name">"Slasher"</p>
           <div class="product-blobs">
             <div class="blob blob-l" style="background: #7fc3f4"></div>
             <div class="blob" style="background: #9dd3c6"></div>
             <div class="blob blob-r" style="background: #cda7db"></div>
           </div>
           <p class="product-price">70.99€</p>
-        </div>
-        <div class="product-list-item">
-          <div class="product-image">
-            <a href="./fall-22/lost-without-u.html"
-              ><img
-                id="image3"
-                src="/assets/images/lost/lost_front_f.JPG"
-                alt="The Lost Without U Hoodie by Pastel Hood"
-            /></a>
-            <h2 class="product-name name-ll">"Lost Without U"</h2>
+          <div class="product-size">
+            <div data-size="S" class="size">S</div>
+            <div data-size="M" class="size selected-size">M</div>
+            <div data-size="L" class="size">L</div>
+            <div data-size="XL" class="size">XL</div>
           </div>
-          <div class="product-blobs">
-            <div class="blob blob-l" style="background: #f8c7ea"></div>
-            <div class="blob" style="background: #cda7db"></div>
-            <div class="blob blob-r" style="background: #7fc3f4"></div>
+          <p class="product-size-info">INFORMÁCIE O VEĽKOSTI</p>
+          <button class="add-button">PRIDAŤ DO KOŠÍKA</button>
+          <p class="product-description">
+            Táto jedinečná mikina rozžiary nielen váš deň, ale aj okoloidúcich
+            ľudí, ktorý pri pohlade na ňu zistia o čo vlastne v živote
+            prichádzajú.
+            <br />
+            <br />
+            Vaše bolesti krížov síce zázračne neodídu, ale za to sa budete cítit
+            aspoň o 5 až 10 rokov mentálne mladší.
+          </p>
+          <div class="product-accordion">
+            <div class="accordion">
+              <p>MATERIÁL A STAROSTLIVOSŤ</p>
+              <span>+</span>
+            </div>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
+            <div class="accordion acc-space">
+              <p>DORUČENIE A VRÁTENIE</p>
+              <span>+</span>
+            </div>
+            <div class="panel">
+              <p>Lorem ipsum...</p>
+            </div>
           </div>
-          <p class="product-price">70.99€</p>
+          <div class="product-alternatives">
+            <p>Čo tak iná farba?</p>
+            <div class="alternatives-container">
+              <div class="alternative">
+                <a href="./real-one.html">
+                  <img src="/assets/images/real/real_group.JPG" />
+                </a>
+                <p class="alternative-name">"Real One"</p>
+                <p class="alternative-price">70.99€</p>
+              </div>
+              <div class="alternative">
+                <a href="./lost-without-u.html">
+                  <img src="/assets/images/lost/lost_group_alt.JPG" />
+                </a>
+                <p class="alternative-name">"Lost Without U"</p>
+                <p class="alternative-price">70.99€</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
-      <div class="motto">
+      <section class="motto">
         <p>"Dizajn s kombináciou maximálneho komfortu a krásy"</p>
-      </div>
-      <div class="newsletter">
+      </section>
+      <section class="newsletter">
         <form>
           <input type="text" name="name" id="name" placeholder="MENO" />
           <input type="email" name="email" id="email" placeholder="EMAIL" />
           <input type="submit" value="ODOBERAJ" />
         </form>
         <p>newsletter</p>
-      </div>
+      </section>
     </main>
     <footer>
       <div class="footer-header">
