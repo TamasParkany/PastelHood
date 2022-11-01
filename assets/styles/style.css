@@ -418,7 +418,7 @@ footer .footer-navigation .legal p {
 .product-list-item {
   width: 75%;
   max-width: 400px;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -460,6 +460,7 @@ footer .footer-navigation .legal p {
 }
 .product-list-item .product-blobs {
   display: flex;
+  justify-content: center;
   margin: 8px 0;
 }
 .product-list-item .product-blobs .blob {
@@ -481,6 +482,7 @@ footer .footer-navigation .legal p {
   font-size: calc(14px + 0.5vw);
   letter-spacing: 0.15em;
   color: #1e1e1e;
+  text-align: center;
 }
 
 .product-container {

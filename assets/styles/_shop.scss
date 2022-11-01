@@ -33,7 +33,7 @@
 .product-list-item {
   width: 75%;
   max-width: 400px;
-  display: flex;
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -73,6 +73,7 @@
   }
   .product-blobs {
     display: flex;
+    justify-content: center;
     margin: 8px 0;
     .blob {
       width: 15px;
@@ -94,5 +95,6 @@
     font-size: calc(14px + 0.5vw);
     letter-spacing: 0.15em;
     color: $primary;
+    text-align: center;
   }
 }
