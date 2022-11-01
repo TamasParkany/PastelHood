@@ -58,6 +58,15 @@ a {
     bottom: 100px;
     font-size: calc(40px + 4vw);
   }
+  .product-list-item .name-l {
+    left: -125px;
+  }
+  .product-list-item .name-ll {
+    left: -200px;
+  }
+  .product-list-item .name-r {
+    right: -105px;
+  }
 
   /*ABOUT*/
   .about-banner h2 {
@@ -87,7 +96,7 @@ a {
 }
 
 /*DESKTOP*/
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1200px) {
   .banner-container {
     height: 100vh;
   }

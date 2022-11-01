@@ -56,6 +56,7 @@ header {
   top: 50%;
   right: 5%;
   transform: translate(-50%, -50%);
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -114,6 +115,7 @@ header {
   color: #fff;
   font-family: "Cantarell", sans-serif;
   font-size: calc(24px + 1vw);
+  cursor: pointer;
 }
 
 main {
@@ -382,9 +384,6 @@ footer .footer-navigation .legal p {
 .shop-banner-container {
   width: 100%;
   height: 60vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .shop-banner-img {
@@ -412,13 +411,12 @@ footer .footer-navigation .legal p {
 
 .product-list-container {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .product-list-item {
-  width: 80%;
+  width: 75%;
   max-width: 400px;
   display: flex;
   flex-direction: column;
@@ -426,17 +424,39 @@ footer .footer-navigation .legal p {
   align-items: center;
   margin-bottom: 50px;
 }
-.product-list-item img {
+.product-list-item:nth-child(odd) {
+  margin-left: auto;
+}
+.product-list-item .product-image {
+  position: relative;
+}
+.product-list-item .product-image img {
   width: 100%;
+  height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .product-list-item .product-name {
+  position: absolute;
   font-family: "Italiana-Plus", serif;
-  font-size: calc(22px + 0.5vw);
+  font-size: calc(40px + 0.5vw);
   letter-spacing: 0.15em;
-  margin-top: 30px;
   color: #1e1e1e;
+}
+.product-list-item .name-l {
+  top: 50%;
+  left: -120px;
+  transform: rotate(90deg);
+}
+.product-list-item .name-ll {
+  top: 50%;
+  left: -195px;
+  transform: rotate(90deg);
+}
+.product-list-item .name-r {
+  top: 50%;
+  right: -100px;
+  transform: rotate(-90deg);
 }
 .product-list-item .product-blobs {
   display: flex;
@@ -481,7 +501,7 @@ footer .footer-navigation .legal p {
 }
 .product-container .product-name {
   font-family: "Italiana-Plus", serif;
-  font-size: calc(22px + 0.5vw);
+  font-size: calc(24px + 0.5vw);
   letter-spacing: 0.15em;
   color: #1e1e1e;
 }
@@ -610,7 +630,7 @@ footer .footer-navigation .legal p {
 }
 .product-container .product-alternatives .alternative-name {
   font-family: "Italiana-Plus", serif;
-  font-size: calc(14px + 0.5vw);
+  font-size: calc(16px + 0.5vw);
   margin-bottom: 5px;
 }
 .product-container .product-alternatives .alternative-price {
@@ -637,7 +657,7 @@ footer .footer-navigation .legal p {
 .about-banner {
   width: 100%;
   min-height: 700px;
-  background-image: url("/assets/images/DSC02824.JPG");
+  background-image: url("/assets/images/banner_about.JPG");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -799,13 +819,6 @@ footer .footer-navigation .legal p {
   right: -160px;
 }
 
-/* 
-  bottom: 125px;
-  left: -225px;
-
-  bottom: 80px;
-  right: -175px;
-*/
 .contact-faq {
   width: 100%;
   min-height: 500px;
@@ -843,14 +856,14 @@ footer .footer-navigation .legal p {
   margin-bottom: 30px;
   text-align: justify;
   line-height: 2.2;
-}
-.contact-container .contact-info a {
-  color: #1e1e1e;
-  font-weight: 700;
   -webkit-user-select: text;
      -moz-user-select: text;
       -ms-user-select: text;
           user-select: text;
+}
+.contact-container .contact-info a {
+  color: #1e1e1e;
+  font-weight: 700;
 }
 .contact-container form {
   width: 100%;
@@ -975,6 +988,15 @@ footer .footer-navigation .legal p {
     bottom: 100px;
     font-size: calc(40px + 4vw);
   }
+  .product-list-item .name-l {
+    left: -125px;
+  }
+  .product-list-item .name-ll {
+    left: -200px;
+  }
+  .product-list-item .name-r {
+    right: -105px;
+  }
   /*ABOUT*/
   .about-banner h2 {
     right: -97.5px;
@@ -1002,7 +1024,7 @@ footer .footer-navigation .legal p {
   }
 }
 /*DESKTOP*/
-@media only screen and (min-width: 1300px) {
+@media only screen and (min-width: 1200px) {
   .banner-container {
     height: 100vh;
   }

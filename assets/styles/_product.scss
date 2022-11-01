@@ -15,7 +15,7 @@
   }
   .product-name {
     font-family: $font-decor;
-    font-size: calc(22px + 0.5vw);
+    font-size: calc(24px + 0.5vw);
     letter-spacing: 0.15em;
     color: $primary;
   }
@@ -142,7 +142,7 @@
       }
       &-name {
         font-family: $font-decor;
-        font-size: calc(14px + 0.5vw);
+        font-size: calc(16px + 0.5vw);
         margin-bottom: 5px;
       }
       &-price {

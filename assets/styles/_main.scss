@@ -33,6 +33,7 @@ header {
   top: 50%;
   right: 5%;
   transform: translate(-50%, -50%);
+  opacity: 1;
   cursor: pointer;
 }
 
@@ -89,6 +90,7 @@ header {
       color: $neutral;
       font-family: $font-func;
       font-size: calc(24px + 1vw);
+      cursor: pointer;
     }
   }
 }

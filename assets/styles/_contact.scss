@@ -33,10 +33,10 @@
     margin-bottom: 30px;
     text-align: justify;
     line-height: 2.2;
+    user-select: text;
     a {
       color: $primary;
       font-weight: 700;
-      user-select: text;
     }
   }
   form {
