@@ -22,15 +22,26 @@ html {
   user-select: none;
 }
 
+main {
+  overflow: hidden;
+  display: block;
+}
+
 a {
   text-decoration: none;
 }
 
+@import "normalize";
 @import "main";
 @import "shop";
 @import "product";
 @import "about";
 @import "contact";
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
 
 /*TABLET*/
 @media only screen and (min-width: 750px) {

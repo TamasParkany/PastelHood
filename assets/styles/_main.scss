@@ -27,14 +27,197 @@ header {
     width: 100%;
   }
 }
-
+.cart {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 50%;
+  left: 9vw;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
 .hamburger {
+  width: 30px;
+  height: 30px;
   position: absolute;
   top: 50%;
   right: 3vw;
+  display: flex;
   transform: translate(-50%, -50%);
   opacity: 1;
   cursor: pointer;
+}
+
+.cart-overlay {
+  width: 100%;
+  max-width: 450px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  z-index: 9;
+  background-color: $neutral;
+  transition: left 0.3s;
+  .cart-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    .cart-heading {
+      width: 80%;
+      display: flex;
+      justify-content: flex-start;
+      font-family: $font-decor;
+      font-size: 40px;
+      letter-spacing: 0.15em;
+      margin-top: 40px;
+    }
+    .cart-close {
+      position: absolute;
+      top: 25px;
+      right: 5vw;
+      color: $primary;
+      font-family: $font-func;
+      font-size: calc(20px + 1vw);
+      cursor: pointer;
+    }
+    .cart-list {
+      width: 90%;
+      height: 60%;
+      display: flex;
+      flex-direction: column;
+      overflow-y: auto;
+      .cart-item {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        border-bottom: 1px solid $primary;
+        margin-bottom: 40px;
+        .cart-item-left {
+          width: 50%;
+          .cart-item-image {
+            width: 80%;
+            height: 100%;
+            position: relative;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+            .cart-item-name {
+              position: absolute;
+              top: 50%;
+              right: -55px;
+              transform: rotate(-90deg);
+              font-family: $font-decor;
+              font-size: calc(16px + 0.5vw);
+              letter-spacing: 0.15em;
+              color: $primary;
+              font-weight: 400;
+            }
+          }
+        }
+        .cart-item-right {
+          width: 40%;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          .cart-item-size {
+            font-family: $font-func;
+            font-size: 20px;
+            letter-spacing: 0.15em;
+            color: $primary;
+            border-bottom: 2px solid $primary;
+            margin-bottom: 20px;
+          }
+          .cart-item-price {
+            font-family: $font-func;
+            font-size: 16px;
+            letter-spacing: 0.15em;
+            color: $primary;
+            margin-bottom: 10px;
+          }
+          .cart-item-counter {
+            display: flex;
+            align-items: center;
+            font-family: $font-func;
+            font-size: 16px;
+            letter-spacing: 0.15em;
+            color: $primary;
+            margin-bottom: 15px;
+            .counter-increment,
+            .counter-decrement {
+              cursor: pointer;
+            }
+            .cart-item-count {
+              margin: 0 20px;
+            }
+          }
+          .cart-item-remove {
+            font-family: $font-func;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            color: $secondary-btn;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+    .cart-buttons {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+      .cart-price-container {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+        font-family: $font-func;
+        font-size: 16px;
+        letter-spacing: 0.15em;
+        margin-bottom: 20px;
+      }
+      .cart-finish {
+        width: 90%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary-btn;
+        color: $neutral;
+        font-family: $font-func;
+        font-size: 12px;
+        letter-spacing: 0.15em;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+      .cart-continue {
+        width: 90%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $neutral;
+        color: $primary;
+        font-family: $font-func;
+        font-size: 12px;
+        letter-spacing: 0.15em;
+        border: 1px solid $primary-btn;
+        cursor: pointer;
+      }
+    }
+  }
 }
 
 .nav-overlay {
@@ -94,10 +277,6 @@ header {
       cursor: pointer;
     }
   }
-}
-
-main {
-  overflow: hidden;
 }
 
 .banner-container {
