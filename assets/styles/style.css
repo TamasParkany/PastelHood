@@ -1094,7 +1094,7 @@ footer .footer-navigation .legal p {
   color: #fff;
 }
 .size-guide-overlay .size-guide-image::before {
-  content: "veľkostná tabulka";
+  content: "veľkostná tabuľka";
   position: absolute;
   width: 450px;
   text-align: center;
