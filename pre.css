@@ -58,7 +58,6 @@ body {
 
 .gallery-container {
   width: 100%;
-  max-width: 925px;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -113,6 +112,9 @@ body {
   }
   .text {
     font-size: 56px;
+  }
+  .gallery-container {
+    max-width: 875px;
   }
   .carousel-nav {
     font-size: 18px;
