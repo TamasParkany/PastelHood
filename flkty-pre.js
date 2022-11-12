@@ -7,7 +7,6 @@ const flkty = new Flickity(carousel, {
   imagesLoaded: true,
   prevNextButtons: false,
   pageDots: false,
-  lazyLoad: 2,
 });
 
 prev.addEventListener("click", () => {
