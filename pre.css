@@ -58,7 +58,7 @@ body {
 
 .gallery-container {
   width: 100%;
-  max-width: 950px;
+  max-width: 925px;
   height: 50vh;
   display: flex;
   flex-direction: column;
@@ -112,10 +112,10 @@ body {
 
 @media only screen and (min-width: 1200px) {
   .logo {
-    width: 185px;
+    width: 200px;
   }
   .text {
-    font-size: 55px;
+    font-size: 56px;
   }
   .carousel-nav {
     font-size: 18px;
