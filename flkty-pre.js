@@ -16,6 +16,12 @@ next.addEventListener("click", () => {
   flkty.next();
 });
 
+//resizes carousel after content has finished loading
+
+window.addEventListener("load", () => {
+  flkty.resize();
+});
+
 //ANIMATE.CSS
 
 const animateCSS = (element, animation, prefix = "animate__") =>
