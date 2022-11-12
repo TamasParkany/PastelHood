@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="sk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/phico.png"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&family=Tenor+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <title>Pastel Hood</title>
+    <link rel="stylesheet" href="/assets/temp/flickity.min.css" />
+    <link rel="stylesheet" href="/assets/styles/style.css" />
+    <script defer src="/assets/temp/flickity.pkgd.min.js"></script>
+    <script defer src="/index.js"></script>
+    <script defer src="/flkty-home.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <div class="logo">
+          <a href="/">
+            <img src="./assets/images/t200.png" alt="Logo of Pastel Hood" />
+          </a>
+        </div>
+        <div class="cart">
+          <img src="/assets/images/cart.png" alt="" />
+        </div>
+        <div class="hamburger">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.6 29.8">
+            <path
+              d="M13.1 6.2h39c.6 0 1-.4 1-1s-.4-1-1-1h-39c-.6 0-1 .4-1 1s.5 1 1 1zM52.1 24.8h-39c-.6 0-1 .4-1 1s.4 1 1 1h39c.6 0 1-.4 1-1s-.4-1-1-1zM43.8 15.5c0-.6-.4-1-1-1h-39c-.6 0-1 .4-1 1s.4 1 1 1h39c.5 0 1-.4 1-1z"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </header>
+    <div class="cart-overlay">
+      <div class="cart-container">
+        <div class="cart-heading">
+          <p>Košík</p>
+        </div>
+        <div class="cart-list">
+          <div id="f22ro-s" class="cart-item">
+            <div class="cart-item-left">
+              <div class="cart-item-image">
+                <img src="/assets/images/real/real_front.JPG" alt="" />
+                <div class="cart-item-name">"Real One"</div>
+              </div>
+            </div>
+            <div class="cart-item-right">
+              <div class="cart-item-size">S</div>
+              <div class="cart-item-price">70.99€</div>
+              <div class="cart-item-counter">
+                <div class="counter-decrement">-</div>
+                <div class="cart-item-count">1</div>
+                <div class="counter-increment">+</div>
+              </div>
+              <div class="cart-item-remove">ODSTRÁNIŤ</div>
+            </div>
+          </div>
+          <div id="f22ro-m" class="cart-item">
+            <div class="cart-item-left">
+              <div class="cart-item-image">
+                <img src="/assets/images/real/real_front.JPG" alt="" />
+                <div class="cart-item-name">"Real One"</div>
+              </div>
+            </div>
+            <div class="cart-item-right">
+              <div class="cart-item-size">M</div>
+              <div class="cart-item-price">70.99€</div>
+              <div class="cart-item-counter">
+                <div class="counter-decrement">-</div>
+                <div class="cart-item-count">1</div>
+                <div class="counter-increment">+</div>
+              </div>
+              <div class="cart-item-remove">ODSTRÁNIŤ</div>
+            </div>
+          </div>
+        </div>
+        <div class="cart-buttons">
+          <div class="cart-price-container">
+            <p>SPOLU</p>
+            <span class="cart-total-price">141.98€</span>
+          </div>
+          <div class="cart-finish">DOKONČIŤ OBJEDNÁVKU</div>
+          <div class="cart-continue">POKRAČOVAŤ V NÁKUPE</div>
+        </div>
+        <div class="cart-close">X</div>
+      </div>
+    </div>
+    <div class="nav-overlay">
+      <div class="nav-container">
+        <nav>
+          <a href="/">DOMOV</a>
+          <a href="/shop/index.html">OBCHOD</a>
+          <a href="/about/index.html">O NÁS</a>
+          <a href="/contact/index.html">KONTAKT</a>
+          <a href="/faq/index.html">FAQ</a>
+          <div class="socials">
+            <div class="footer-divider"></div>
+            <div class="social-links">
+              <!--ig-->
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <circle cx="256" cy="255.833" r="80"></circle>
+                  <path
+                    d="M177.805 176.887c21.154-21.154 49.28-32.93 79.195-32.93s58.04 11.838 79.195 32.992c13.422 13.42 23.01 29.55 28.232 47.55H448.5v-113c0-26.51-20.49-47-47-47h-288c-26.51 0-49 20.49-49 47v113h85.072c5.222-18 14.81-34.19 28.233-47.614zM416.5 147.7c0 7.07-5.73 12.8-12.8 12.8h-38.4c-7.07 0-12.8-5.73-12.8-12.8v-38.4c0-7.07 5.73-12.8 12.8-12.8h38.4c7.07 0 12.8 5.73 12.8 12.8v38.4zm-80.305 187.58c-21.154 21.153-49.28 32.678-79.195 32.678s-58.04-11.462-79.195-32.616c-21.115-21.115-32.76-49.842-32.803-78.842H64.5v143c0 26.51 22.49 49 49 49h288c26.51 0 47-22.49 47-49v-143h-79.502c-.043 29-11.687 57.664-32.803 78.78z"
+                  ></path></svg
+              ></a>
+              <!--fb-->
+              <a href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                  <path
+                    d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64h-64z"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+            <div class="footer-divider"></div>
+          </div>
+        </nav>
+        <div class="nav-close">X</div>
+      </div>
+    </div>
+    <main>
+      <section class="banner-container">
+        <div class="banner-img">
+          <a href="/shop/index.html"
+            ><img src="./assets/images/banner_main.JPG" alt=""
+          /></a>
+          <p>fall 2022</p>
+        </div>
+        <div class="banner-txt">
+          <p>Štýl pre tých ktorý sa neboja odviazať</p>
+          <a href="/shop/index.html"
+            ><p class="banner-link">PREJSŤ NA KOLEKCIU</p></a
+          >
+        </div>
+      </section>
+      <section class="gallery-container">
+        <div class="carousel">
+          <div class="carousel-cell">
+            <img
+              src="./assets/images/slasher/slasher_group.JPG"
+              alt="placeholder"
+            />
+          </div>
+          <div class="carousel-cell">
+            <img
+              src="./assets/images/slasher/slasher_group_alt.JPG"
+              alt="placeholder"
+            />
+          </div>
+          <div class="carousel-cell">
+            <img src="./assets/images/real/real_group.JPG" alt="placeholder" />
+          </div>
+          <div class="carousel-cell">
+            <img
+              src="./assets/images/real/real_group_alt.JPG"
+              alt="placeholder"
+            />
+          </div>
+          <div class="carousel-cell">
+            <img src="./assets/images/lost/lost_group.JPG" alt="placeholder" />
+          </div>
+          <div class="carousel-cell">
+            <img
+              src="./assets/images/lost/lost_group_alt.JPG"
+              alt="placeholder"
+            />
+          </div>
+          <div class="carousel-cell">
+            <img src="./assets/images/group_1.JPG" alt="placeholder" />
+          </div>
+          <div class="carousel-cell">
+            <img src="./assets/images/group_2.JPG" alt="placeholder" />
+          </div>
+        </div>
+        <div class="carousel-nav">
+          <div class="carousel-prev">VZAD</div>
+          <div class="carousel-nav-divider"></div>
+          <div class="carousel-next">ĎALEJ</div>
+        </div>
+      </section>
+      <section class="motto">
+        <p>"Dizajn s kombináciou maximálneho komfortu a krásy"</p>
+      </section>
+      <section class="newsletter">
+        <form>
+          <input type="text" name="name" id="name" placeholder="MENO" />
+          <input type="email" name="email" id="email" placeholder="EMAIL" />
+          <input type="submit" value="ODOBERAJ" />
+        </form>
+        <p>newsletter</p>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-header">
+        <div class="footer-divider"></div>
+        <div class="footer-heading">info</div>
+        <div class="footer-divider"></div>
+      </div>
+      <div class="footer-navigation">
+        <div class="links">
+          <a href="/">DOMOV</a>
+          <a href="/shop/index.html">OBCHOD</a>
+          <a href="/about/index.html">O NÁS</a>
+          <a href="/contact/index.html">KONTAKT</a>
+          <a href="/faq/index.html">FAQ</a>
+        </div>
+        <div class="socials">
+          <div class="footer-divider"></div>
+          <div class="social-links">
+            <!--ig-->
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <circle cx="256" cy="255.833" r="80"></circle>
+                <path
+                  d="M177.805 176.887c21.154-21.154 49.28-32.93 79.195-32.93s58.04 11.838 79.195 32.992c13.422 13.42 23.01 29.55 28.232 47.55H448.5v-113c0-26.51-20.49-47-47-47h-288c-26.51 0-49 20.49-49 47v113h85.072c5.222-18 14.81-34.19 28.233-47.614zM416.5 147.7c0 7.07-5.73 12.8-12.8 12.8h-38.4c-7.07 0-12.8-5.73-12.8-12.8v-38.4c0-7.07 5.73-12.8 12.8-12.8h38.4c7.07 0 12.8 5.73 12.8 12.8v38.4zm-80.305 187.58c-21.154 21.153-49.28 32.678-79.195 32.678s-58.04-11.462-79.195-32.616c-21.115-21.115-32.76-49.842-32.803-78.842H64.5v143c0 26.51 22.49 49 49 49h288c26.51 0 47-22.49 47-49v-143h-79.502c-.043 29-11.687 57.664-32.803 78.78z"
+                ></path></svg
+            ></a>
+            <!--fb-->
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                  d="M288 192v-38.1c0-17.2 3.8-25.9 30.5-25.9H352V64h-55.9c-68.5 0-91.1 31.4-91.1 85.3V192h-45v64h45v192h83V256h56.4l7.6-64h-64z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+          <div class="footer-divider"></div>
+        </div>
+        <div class="legal">
+          <a href="/terms/index.html">OBCHODNÉ PODMIENKY</a>
+          <a href="/privacy/index.html">OCHRANA OSOBNÝCH ÚDAJOV</a>
+          <p>© 2022 Pastel Hood</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

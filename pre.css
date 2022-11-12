@@ -1,0 +1,150 @@
+@font-face {
+  font-family: Italiana-Plus;
+  src: url(/assets/fonts/Italiana-Regular-Plus.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  overflow: hidden;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  height: 100vh;
+  background-color: #efedea;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: calc(100px + 0.5vw);
+  margin-bottom: 75px;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.text-container {
+  margin-bottom: 75px;
+  position: relative;
+  width: 100%;
+  height: 80px;
+}
+
+.text1 {
+  font-family: "Italiana-Plus", serif;
+  font-size: calc(32px + 0.5vw);
+  letter-spacing: 0.15em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+}
+
+.text2 {
+  font-family: "Italiana-Plus", serif;
+  font-size: calc(32px + 0.5vw);
+  letter-spacing: 0.15em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+.text {
+  font-family: "Italiana-Plus", serif;
+  font-size: calc(32px + 0.5vw);
+  letter-spacing: 0.15em;
+  margin-bottom: 75px;
+}
+
+.gallery-container {
+  width: 100%;
+  max-width: 950px;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-cell {
+  height: 100%;
+  margin-right: 10px;
+}
+.carousel-cell img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  transform: scale(0.8);
+  transition: transform 0.3s;
+}
+
+.carousel-cell.is-selected img {
+  transform: scale(1);
+}
+
+.carousel-nav {
+  display: flex;
+  align-items: center;
+  font-size: calc(11px + 0.5vw);
+  font-family: "Cantarell", sans-serif;
+  letter-spacing: 0.15em;
+  margin-top: 40px;
+}
+.carousel-nav div {
+  display: inline-block;
+}
+.carousel-nav-divider {
+  width: 60px;
+  height: 1px;
+  background-color: #1e1e1e;
+  margin: 0 15px;
+}
+.carousel-nav .carousel-prev,
+.carousel-nav .carousel-next {
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 1200px) {
+  .logo {
+    width: calc(180px + 0.5vw);
+  }
+  .text {
+    font-size: calc(48px + 0.5vw);
+  }
+}/*# sourceMappingURL=pre.css.map */
