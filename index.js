@@ -66,7 +66,7 @@ if (localStorage.getItem("ph__cart") === null) {
 }
 
 const stripe = Stripe(
-  "pk_test_51M3l8fDWw7KIDNJZczS1AOw0zkkRlyat3cXLdCqRUhpmjEzfmtSDwlIKPIUnQK1S4j21KJFaJQr9deBZSrEfbfgv00wpxq6XjQ"
+  "pk_live_51M3l8fDWw7KIDNJZ0WXAMhS6qGO2zAVjJW91LF0fB580QujNDI5CmhPPP9iDzMiMwCwsjrCI6p1CEiFUa6XdI6Ph00S62JJyhN"
 );
 
 function fillCheckout(item) {
