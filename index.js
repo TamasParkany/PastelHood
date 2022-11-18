@@ -73,45 +73,45 @@ function fillCheckout(item) {
   switch (item.id) {
     case "f22ro":
       if (item.size === "XS") {
-        return "price_1M5G0vDWw7KIDNJZRiNQvriZ";
+        return "price_1M5PYvDWw7KIDNJZLbcIFA7u";
       } else if (item.size === "S") {
-        return "price_1M5G1iDWw7KIDNJZjggF6Mzs";
+        return "price_1M5PZZDWw7KIDNJZlPgYngC0";
       } else if (item.size === "M") {
-        return "price_1M5Ey9DWw7KIDNJZwcrCrJpT";
+        return "price_1M5PZiDWw7KIDNJZk4pg0NV4";
       } else if (item.size === "L") {
-        return "price_1M5G2pDWw7KIDNJZK2O7mAJK";
+        return "price_1M5PZvDWw7KIDNJZHPVlipDI";
       } else if (item.size === "XL") {
-        return "price_1M5G3DDWw7KIDNJZzZ8FukqC";
+        return "price_1M5Pa2DWw7KIDNJZuw2vIpeN";
       } else {
-        return "price_1M5G3UDWw7KIDNJZ4dcVxzCR";
+        return "price_1M5Pa8DWw7KIDNJZlpEWwTCt";
       }
     case "f22s":
       if (item.size === "XS") {
-        return "price_1M5G4NDWw7KIDNJZ6OAJwIWy";
+        return "price_1M5PaRDWw7KIDNJZj7aNTU0S";
       } else if (item.size === "S") {
-        return "price_1M5G4lDWw7KIDNJZEwTEUZKJ";
+        return "price_1M5PaZDWw7KIDNJZuUTF4uqG";
       } else if (item.size === "M") {
-        return "price_1M55viDWw7KIDNJZ5RpjKUz0";
+        return "price_1M5PawDWw7KIDNJZP6LXwqqT";
       } else if (item.size === "L") {
-        return "price_1M5G56DWw7KIDNJZQvhkFpZ6";
+        return "price_1M5Pb6DWw7KIDNJZ3AhK6FJi";
       } else if (item.size === "XL") {
-        return "price_1M5G5XDWw7KIDNJZ8jP4IcOD";
+        return "price_1M5PbDDWw7KIDNJZcuTJqlCc";
       } else {
-        return "price_1M5G5uDWw7KIDNJZIqHjc7oo";
+        return "price_1M5PbJDWw7KIDNJZ3pzYjXQu";
       }
     case "f22lwu":
       if (item.size === "XS") {
-        return "price_1M5G6RDWw7KIDNJZaAuCJFhv";
+        return "price_1M5PbiDWw7KIDNJZaOoVUSlJ";
       } else if (item.size === "S") {
-        return "price_1M5G6nDWw7KIDNJZragb25Qh";
+        return "price_1M5PbnDWw7KIDNJZqSbWPAm7";
       } else if (item.size === "M") {
-        return "price_1M5Ez1DWw7KIDNJZmj0cQqWt";
+        return "price_1M5PbwDWw7KIDNJZt0rIAKnG";
       } else if (item.size === "L") {
-        return "price_1M5G7VDWw7KIDNJZE75ZOVh4";
+        return "price_1M5Pc8DWw7KIDNJZGDB3ar3j";
       } else if (item.size === "XL") {
-        return "price_1M5G7sDWw7KIDNJZbz4aVsZE";
+        return "price_1M5PcDDWw7KIDNJZJjBSWT6E";
       } else {
-        return "price_1M5G8FDWw7KIDNJZfWsbXXDY";
+        return "price_1M5PcIDWw7KIDNJZkswB1j6q";
       }
   }
 }
