@@ -1,6 +1,13 @@
-.shop-banner-container {
+.shop-banner {
   width: 100%;
   height: 60vh;
+}
+
+.shop-banner-container {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .shop-banner-img {
@@ -94,5 +101,118 @@
     letter-spacing: 0.15em;
     color: $primary;
     text-align: center;
+  }
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .countdown-headsup {
+    font-family: $font-func;
+    font-size: calc(20px + 0.5vw);
+    margin-bottom: 40px;
+  }
+}
+
+.countdown {
+  display: flex;
+  color: $neutral;
+  margin-bottom: 80px;
+  .days {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .days-nums {
+      display: flex;
+      font-size: 32px;
+    }
+    .days-nums > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 65px;
+      width: 45px;
+      background-color: $primary;
+      border-radius: 20px;
+      margin: 4px;
+    }
+    .days-txt {
+      color: $primary;
+      font-size: 14px;
+      margin-top: 5px;
+      font-family: $font-func;
+      font-size: calc(12px + 0.5vw);
+    }
+  }
+  .hours {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .hours-nums {
+      display: flex;
+      font-size: 32px;
+    }
+    .hours-nums > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 65px;
+      width: 45px;
+      background-color: $primary;
+      border-radius: 20px;
+      margin: 4px;
+    }
+    .hours-txt {
+      color: $primary;
+      font-size: 14px;
+      margin-top: 5px;
+      font-family: $font-func;
+      font-size: calc(12px + 0.5vw);
+    }
+  }
+  .minutes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .minutes-nums {
+      display: flex;
+      font-size: 32px;
+    }
+    .minutes-nums > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 65px;
+      width: 45px;
+      background-color: $primary;
+      border-radius: 20px;
+      margin: 4px;
+    }
+    .minutes-txt {
+      color: $primary;
+      font-size: 14px;
+      margin-top: 5px;
+      font-family: $font-func;
+      font-size: calc(12px + 0.5vw);
+    }
+  }
+}
+
+.divider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 25px;
+  .dot {
+    height: 5px;
+    width: 5px;
+    background-color: $primary;
+    margin: 10px 4px;
   }
 }

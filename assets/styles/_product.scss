@@ -1,8 +1,14 @@
 .product-container {
   width: 100%;
+  .product-container-top {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
   .product-carousel {
     width: 100%;
-    margin-bottom: 20px;
+    max-width: 450px;
+    margin: 0 auto 20px auto;
     img {
       width: 100%;
     }
@@ -51,7 +57,7 @@
     margin-bottom: 20px;
     letter-spacing: 0.15em;
     div {
-      margin: 0 5px;
+      margin: 0 10px;
       cursor: pointer;
     }
   }
@@ -84,6 +90,7 @@
     font-size: calc(12px + 0.5vw);
     text-align: justify;
     margin-bottom: 30px;
+    color: $secondary-btn;
   }
   .product-accordion {
     width: 75%;
@@ -118,9 +125,50 @@
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s;
+    margin: 40px 0;
+    div {
+      margin-bottom: 10px;
+      p {
+        font-weight: bold;
+      }
+    }
+    .material {
+      margin-bottom: 20px;
+    }
+    .instrukcie {
+      margin-bottom: 20px;
+      div {
+        display: flex;
+        align-items: center;
+      }
+      img {
+        width: 25px;
+        height: 25px;
+      }
+    }
+    .panel-cena {
+      color: rgba(30, 30, 30, 0.5);
+    }
+    .packeta {
+      p,
+      div {
+        text-decoration: line-through;
+      }
+    }
+    .odstupenie {
+      margin-top: 40px;
+    }
+    .odstupenie-text {
+      margin-top: 10px;
+    }
+    a {
+      color: $secondary-btn;
+    }
   }
   .product-alternatives {
     width: 80%;
+    max-width: 1440px;
+    margin: 0 auto;
     p {
       font-family: $font-decor;
       font-size: calc(16px + 1vw);
@@ -250,13 +298,13 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 7;
-    font-size: calc(40px + 0.5vw);
+    font-size: 44px;
     font-family: $font-decor;
   }
   .size-guide-selector {
     display: flex;
     font-family: $font-func;
-    font-size: calc(20px + 0.5vw);
+    font-size: 23px;
     margin-top: 40px;
     letter-spacing: 0.15em;
     div {
@@ -266,8 +314,8 @@
   }
   .size-guide-close {
     position: absolute;
-    top: 25px;
-    right: 5vw;
+    top: 30px;
+    right: 30px;
     color: $primary;
     font-family: $font-func;
     font-size: calc(20px + 1vw);

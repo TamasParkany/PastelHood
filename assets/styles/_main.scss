@@ -14,6 +14,7 @@ header {
 
 .header-container {
   width: 100%;
+  max-width: 1440px;
   position: relative;
 }
 
@@ -22,31 +23,52 @@ header {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: calc(50px + 1vw);
+  width: calc(60px + 1vw);
   img {
     width: 100%;
   }
 }
 .cart {
+  width: 23px;
+  height: 23px;
+  position: absolute;
+  top: 50%;
+  left: 40px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  .cart-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+    .cart-count {
+      width: 15px;
+      height: 15px;
+      background-color: $secondary-btn;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: -8px;
+      right: -8px;
+      font-family: $font-func;
+      font-size: 10px;
+      color: $neutral;
+      display: none;
+    }
+  }
+}
+.hamburger {
   width: 25px;
   height: 25px;
   position: absolute;
   top: 50%;
-  left: 9vw;
-  transform: translate(-50%, -50%);
-  cursor: pointer;
-  img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-}
-.hamburger {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 50%;
-  right: 3vw;
+  right: 15px;
   display: flex;
   transform: translate(-50%, -50%);
   opacity: 1;
@@ -82,11 +104,11 @@ header {
     }
     .cart-close {
       position: absolute;
-      top: 25px;
-      right: 5vw;
+      top: 30px;
+      right: 30px;
       color: $primary;
       font-family: $font-func;
-      font-size: calc(20px + 1vw);
+      font-size: 30px;
       cursor: pointer;
     }
     .cart-list {
@@ -115,14 +137,15 @@ header {
             }
             .cart-item-name {
               position: absolute;
-              top: 50%;
-              right: -55px;
+              top: 40%;
+              right: -75px;
               transform: rotate(-90deg);
               font-family: $font-decor;
               font-size: calc(16px + 0.5vw);
               letter-spacing: 0.15em;
               color: $primary;
               font-weight: 400;
+              width: 150px;
             }
           }
         }
@@ -246,10 +269,10 @@ header {
       letter-spacing: 0.15em;
       a {
         color: $neutral;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
       }
       .socials {
-        margin-top: 40px;
+        margin-top: 20px;
         div {
           margin: 10px;
         }
@@ -260,6 +283,9 @@ header {
           a {
             margin: 5px;
           }
+          .tiktok {
+            transform: scale(0.7) translateX(5px);
+          }
         }
         svg {
           fill: $neutral;
@@ -269,22 +295,29 @@ header {
     }
     .nav-close {
       position: absolute;
-      top: 25px;
-      right: 5vw;
+      top: 30px;
+      right: 30px;
       color: $neutral;
       font-family: $font-func;
-      font-size: calc(20px + 1vw);
+      font-size: 30px;
       cursor: pointer;
     }
   }
 }
 
-.banner-container {
+.banner {
   width: 100%;
   height: 70vh;
+}
+
+.banner-container {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
 }
 
 .banner-img {
@@ -327,13 +360,20 @@ header {
   }
 }
 
-.gallery-container {
+.gallery {
   width: 100%;
   height: 80vh;
+}
+
+.gallery-container {
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .carousel {
@@ -506,6 +546,9 @@ footer {
         a {
           margin: 5px;
         }
+        .tiktok {
+          transform: scale(0.7) translate(3px, 1px);
+        }
       }
       svg {
         fill: $neutral;
@@ -524,14 +567,13 @@ footer {
         margin: 7.5px;
       }
       p {
-        font-size: calc(6px + 0.5vw);
         margin-top: 15px;
       }
     }
   }
 }
 .footer-divider {
-  width: calc(60px + 5vw);
+  width: calc(80px + 5vw);
   height: 0px;
   border: 1px solid $neutral;
 }

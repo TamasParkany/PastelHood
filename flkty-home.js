@@ -15,3 +15,9 @@ prev.addEventListener("click", () => {
 next.addEventListener("click", () => {
   flkty.next();
 });
+
+//resizes carousel after content has finished loading
+
+window.addEventListener("load", () => {
+  flkty.resize();
+});
