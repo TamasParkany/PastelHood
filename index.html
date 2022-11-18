@@ -181,10 +181,29 @@
         <p>"Dizajn s kombináciou maximálneho komfortu a krásy"</p>
       </section>
       <section class="newsletter">
-        <form>
+        <form
+          action="https://formsubmit.co/newsletter@pastelhood.com"
+          method="POST"
+        >
           <input type="text" name="name" id="name" placeholder="MENO" />
-          <input type="email" name="email" id="email" placeholder="EMAIL" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="EMAIL"
+            required
+          />
           <input type="submit" value="ODOBERAJ" />
+          <input
+            type="hidden"
+            name="_subject"
+            value="New newsletter subscription!"
+          />
+          <input
+            type="hidden"
+            name="_next"
+            value="https://pastelhood.com/index.html"
+          />
         </form>
         <p>newsletter</p>
       </section>
