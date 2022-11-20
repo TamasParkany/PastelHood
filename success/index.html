@@ -15,18 +15,18 @@
       href="https://fonts.googleapis.com/css2?family=Cantarell:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <title>Ďakujeme za tvoj nákup!</title>
+    <title>Ďakujeme!</title>
     <link rel="stylesheet" href="/assets/styles/style.css" />
     <script defer src="https://js.stripe.com/v3/"></script>
     <script defer src="/index.js"></script>
-    <script defer src="./dakujeme.js"></script>
+    <script defer src="./success.js"></script>
   </head>
   <body>
     <header>
       <div class="header-container">
         <div class="logo">
           <a href="/">
-            <img src="../assets/images/t200.png" alt="Logo of Pastel Hood" />
+            <img src="/assets/images/t200.png" alt="Logo of Pastel Hood" />
           </a>
         </div>
         <div class="cart">
@@ -109,51 +109,19 @@
     <main>
       <section class="contact-faq">
         <div class="faq-container">
-          <h2>FAQ</h2>
-          <div class="faq-list">
-            <div class="faq-item">
-              <h3>Materiál</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit itaque ratione quam, quis voluptatem unde.
-              </p>
-            </div>
-            <div class="faq-item">
-              <h3>Starostlivosť</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit itaque ratione quam, quis voluptatem unde.
-              </p>
-            </div>
-            <div class="faq-item">
-              <h3>Doručenie</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit itaque ratione quam, quis voluptatem unde.
-              </p>
-            </div>
-            <div class="faq-item">
-              <h3>Platba</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit itaque ratione quam, quis voluptatem unde.
-              </p>
-            </div>
-            <div class="faq-item">
-              <h3>Reklamácia</h3>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Reprehenderit itaque ratione quam, quis voluptatem unde.
-              </p>
-            </div>
-          </div>
+          <h2>Ďakujeme za tvoj nákup!</h2>
         </div>
       </section>
       <section class="newsletter">
         <form>
-          <input type="text" name="name" id="name" placeholder="MENO" />
-          <input type="email" name="email" id="email" placeholder="EMAIL" />
-          <input type="submit" value="ODOBERAJ" />
+          <input type="text" name="name" id="name" placeholder="TVOJE MENO" />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="TVOJ EMAIL"
+          />
+          <input type="submit" value="ODOBERAŤ" />
         </form>
         <p>newsletter</p>
       </section>

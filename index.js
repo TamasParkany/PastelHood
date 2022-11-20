@@ -16,7 +16,6 @@ window.onscroll = function () {
 const cartOverlay = document.getElementsByClassName("cart-overlay")[0];
 const cartOpen = document.getElementsByClassName("cart")[0];
 const cartClose = document.getElementsByClassName("cart-close")[0];
-const cartFinish = document.getElementsByClassName("cart-finish")[0];
 const cartContinue = document.getElementsByClassName("cart-continue")[0];
 
 cartOpen.addEventListener("click", () => {
@@ -26,9 +25,6 @@ cartOpen.addEventListener("click", () => {
 cartClose.addEventListener("click", () => {
   cartOverlay.style.left = "-100vw";
   document.body.classList.remove("stop-scrolling");
-});
-cartFinish.addEventListener("click", () => {
-  console.log("Data sent to Stripe");
 });
 cartContinue.addEventListener("click", () => {
   cartOverlay.style.left = "-100vw";
@@ -65,74 +61,36 @@ if (localStorage.getItem("ph__cart") === null) {
   updateCart();
 }
 
-const stripe = Stripe(
-  "pk_live_51M3l8fDWw7KIDNJZ0WXAMhS6qGO2zAVjJW91LF0fB580QujNDI5CmhPPP9iDzMiMwCwsjrCI6p1CEiFUa6XdI6Ph00S62JJyhN"
-);
-
-function fillCheckout(item) {
-  switch (item.id) {
-    case "f22ro":
-      if (item.size === "XS") {
-        return "price_1M5PYvDWw7KIDNJZLbcIFA7u";
-      } else if (item.size === "S") {
-        return "price_1M5PZZDWw7KIDNJZlPgYngC0";
-      } else if (item.size === "M") {
-        return "price_1M5PZiDWw7KIDNJZk4pg0NV4";
-      } else if (item.size === "L") {
-        return "price_1M5PZvDWw7KIDNJZHPVlipDI";
-      } else if (item.size === "XL") {
-        return "price_1M5Pa2DWw7KIDNJZuw2vIpeN";
-      } else {
-        return "price_1M5Pa8DWw7KIDNJZlpEWwTCt";
-      }
-    case "f22s":
-      if (item.size === "XS") {
-        return "price_1M5PaRDWw7KIDNJZj7aNTU0S";
-      } else if (item.size === "S") {
-        return "price_1M5PaZDWw7KIDNJZuUTF4uqG";
-      } else if (item.size === "M") {
-        return "price_1M5PawDWw7KIDNJZP6LXwqqT";
-      } else if (item.size === "L") {
-        return "price_1M5Pb6DWw7KIDNJZ3AhK6FJi";
-      } else if (item.size === "XL") {
-        return "price_1M5PbDDWw7KIDNJZcuTJqlCc";
-      } else {
-        return "price_1M5PbJDWw7KIDNJZ3pzYjXQu";
-      }
-    case "f22lwu":
-      if (item.size === "XS") {
-        return "price_1M5PbiDWw7KIDNJZaOoVUSlJ";
-      } else if (item.size === "S") {
-        return "price_1M5PbnDWw7KIDNJZqSbWPAm7";
-      } else if (item.size === "M") {
-        return "price_1M5PbwDWw7KIDNJZt0rIAKnG";
-      } else if (item.size === "L") {
-        return "price_1M5Pc8DWw7KIDNJZGDB3ar3j";
-      } else if (item.size === "XL") {
-        return "price_1M5PcDDWw7KIDNJZJjBSWT6E";
-      } else {
-        return "price_1M5PcIDWw7KIDNJZkswB1j6q";
-      }
-  }
-}
-
+//CHECKOUT
 const checkoutButton = document.getElementsByClassName("cart-finish")[0];
+
 checkoutButton.addEventListener("click", () => {
-  if (cart.length === 0) {
-    return;
-  } else {
-    stripe.redirectToCheckout({
-      lineItems: ([] = cart.map((item) => ({
-        price: `${fillCheckout(item)}`,
-        quantity: item.quantity,
-      }))),
-      mode: "payment",
-      successUrl: "https://www.pastelhood.com",
-      cancelUrl: "https://www.pastelhood.com",
-      shippingAddressCollection: {
-        allowedCountries: ["CZ", "SK"],
-      },
-    });
+  if (cart.length > 0) {
+    fetch(
+      "https://pastelhood-api.netlify.app/.netlify/functions/api/create-checkout-session",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          items: [...cart],
+        }),
+      }
+    )
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        } else {
+          return res.json().then((json) => Promise.reject(json));
+        }
+      })
+      .then(({ url }) => {
+        window.location = url;
+      })
+      .catch((e) => {
+        console.error(e.error);
+      });
   }
 });
 
@@ -256,8 +214,8 @@ function updateTotal() {
 }
 
 function updateCartCount() {
+  const cartCount = document.getElementsByClassName("cart-count")[0];
   if (cart.length >= 1) {
-    const cartCount = document.getElementsByClassName("cart-count")[0];
     cartCount.innerText = cart.reduce((acc, curr) => acc + curr.quantity, 0);
     cartCount.style.display = "flex";
   } else {
