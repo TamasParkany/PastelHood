@@ -47,8 +47,15 @@
     font-family: $font-func;
     font-size: calc(14px + 0.5vw);
     letter-spacing: 0.15em;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     color: $primary;
+  }
+  .price-before {
+    font-size: calc(14px + 0.25vw);
+    text-decoration: line-through;
+  }
+  .price-after {
+    margin-bottom: 20px;
   }
   .product-size {
     display: flex;

@@ -102,6 +102,13 @@
     color: $primary;
     text-align: center;
   }
+  .price-before {
+    font-size: calc(14px + 0.25vw);
+    text-decoration: line-through;
+  }
+  .price-info {
+    font-size: calc(14px + 0.25vw);
+  }
 }
 
 .countdown-container {

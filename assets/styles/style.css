@@ -896,6 +896,13 @@ footer .footer-navigation .legal p {
   color: #1e1e1e;
   text-align: center;
 }
+.product-list-item .price-before {
+  font-size: calc(14px + 0.25vw);
+  text-decoration: line-through;
+}
+.product-list-item .price-info {
+  font-size: calc(14px + 0.25vw);
+}
 
 .countdown-container {
   display: flex;
@@ -1060,8 +1067,15 @@ footer .footer-navigation .legal p {
   font-family: "Cantarell", sans-serif;
   font-size: calc(14px + 0.5vw);
   letter-spacing: 0.15em;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   color: #1e1e1e;
+}
+.product-container .price-before {
+  font-size: calc(14px + 0.25vw);
+  text-decoration: line-through;
+}
+.product-container .price-after {
+  margin-bottom: 20px;
 }
 .product-container .product-size {
   display: flex;
@@ -1627,7 +1641,7 @@ footer .footer-navigation .legal p {
   position: absolute;
   top: -38px;
   font-family: "Italiana-Plus", serif;
-  font-size: calc(40px + 0.5vw);
+  font-size: calc(30px + 0.5vw);
 }
 
 .faq-list {
