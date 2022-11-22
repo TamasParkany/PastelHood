@@ -1,16 +1,35 @@
-//HEADER-HIDER
-const header = document.getElementsByTagName("header")[0];
-
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function () {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    header.style.top = "0";
-  } else {
-    header.style.top = "-150px";
-  }
-  prevScrollpos = currentScrollPos;
+//PRODUCT-TABLE
+const productTable = {
+  f22ro: {
+    name: "Real One",
+    price: 59.99,
+    image: "/assets/images/real/real_front.JPG",
+  },
+  f22s: {
+    name: "Slasher",
+    price: 59.99,
+    image: "/assets/images/slasher/slasher_front_f.JPG",
+  },
+  f22lwu: {
+    name: "LWU",
+    price: 59.99,
+    image: "/assets/images/lost/lost_front_f.JPG",
+  },
 };
+
+//HEADER-HIDER
+// const header = document.getElementsByTagName("header")[0];
+
+// let prevScrollpos = window.pageYOffset;
+// window.onscroll = function () {
+//   let currentScrollPos = window.pageYOffset;
+//   if (prevScrollpos > currentScrollPos) {
+//     header.style.top = "0";
+//   } else {
+//     header.style.top = "-150px";
+//   }
+//   prevScrollpos = currentScrollPos;
+// };
 
 //CART-OVERLAY
 const cartOverlay = document.getElementsByClassName("cart-overlay")[0];
@@ -30,25 +49,6 @@ cartContinue.addEventListener("click", () => {
   cartOverlay.style.left = "-100vw";
   document.body.classList.remove("stop-scrolling");
 });
-
-//product-table
-const productTable = {
-  f22ro: {
-    name: "Real One",
-    price: 59.99,
-    image: "/assets/images/real/real_front.JPG",
-  },
-  f22s: {
-    name: "Slasher",
-    price: 59.99,
-    image: "/assets/images/slasher/slasher_front_f.JPG",
-  },
-  f22lwu: {
-    name: "LWU",
-    price: 59.99,
-    image: "/assets/images/lost/lost_front_f.JPG",
-  },
-};
 
 //LOAD-CART
 let cart = [];
