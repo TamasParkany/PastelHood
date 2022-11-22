@@ -51,11 +51,16 @@
     color: $primary;
   }
   .price-before {
-    font-size: calc(14px + 0.25vw);
+    font-size: calc(12px + 0.25vw);
     text-decoration: line-through;
+    margin-bottom: 5px;
   }
   .price-after {
+    color: #ada394;
     margin-bottom: 20px;
+  }
+  .price-info {
+    color: #ada394;
   }
   .product-size {
     display: flex;

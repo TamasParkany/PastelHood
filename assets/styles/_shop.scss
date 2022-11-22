@@ -79,7 +79,7 @@
   .product-blobs {
     display: flex;
     justify-content: center;
-    margin: 8px 0;
+    margin: 10px 0;
     .blob {
       width: 15px;
       height: 15px;
@@ -103,11 +103,16 @@
     text-align: center;
   }
   .price-before {
-    font-size: calc(14px + 0.25vw);
+    font-size: calc(12px + 0.25vw);
     text-decoration: line-through;
   }
+  .price-after {
+    color: #ada394;
+    margin-bottom: 5px;
+  }
   .price-info {
-    font-size: calc(14px + 0.25vw);
+    font-size: calc(12px + 0.25vw);
+    color: #ada394;
   }
 }
 

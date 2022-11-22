@@ -905,7 +905,7 @@ footer .footer-navigation .legal p {
 .product-list-item .product-blobs {
   display: flex;
   justify-content: center;
-  margin: 8px 0;
+  margin: 10px 0;
 }
 .product-list-item .product-blobs .blob {
   width: 15px;
@@ -929,11 +929,16 @@ footer .footer-navigation .legal p {
   text-align: center;
 }
 .product-list-item .price-before {
-  font-size: calc(14px + 0.25vw);
+  font-size: calc(12px + 0.25vw);
   text-decoration: line-through;
 }
+.product-list-item .price-after {
+  color: #ada394;
+  margin-bottom: 5px;
+}
 .product-list-item .price-info {
-  font-size: calc(14px + 0.25vw);
+  font-size: calc(12px + 0.25vw);
+  color: #ada394;
 }
 
 .countdown-container {
@@ -1103,11 +1108,16 @@ footer .footer-navigation .legal p {
   color: #1e1e1e;
 }
 .product-container .price-before {
-  font-size: calc(14px + 0.25vw);
+  font-size: calc(12px + 0.25vw);
   text-decoration: line-through;
+  margin-bottom: 5px;
 }
 .product-container .price-after {
+  color: #ada394;
   margin-bottom: 20px;
+}
+.product-container .price-info {
+  color: #ada394;
 }
 .product-container .product-size {
   display: flex;
