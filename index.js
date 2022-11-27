@@ -38,15 +38,15 @@ const cartClose = document.getElementsByClassName("cart-close")[0];
 const cartContinue = document.getElementsByClassName("cart-continue")[0];
 
 cartOpen.addEventListener("click", () => {
-  cartOverlay.style.left = "0";
+  cartOverlay.style.right = "0";
   document.body.classList.add("stop-scrolling");
 });
 cartClose.addEventListener("click", () => {
-  cartOverlay.style.left = "-100vw";
+  cartOverlay.style.right = "-100vw";
   document.body.classList.remove("stop-scrolling");
 });
 cartContinue.addEventListener("click", () => {
-  cartOverlay.style.left = "-100vw";
+  cartOverlay.style.right = "-100vw";
   document.body.classList.remove("stop-scrolling");
 });
 
@@ -229,10 +229,10 @@ const navOpen = document.getElementsByClassName("hamburger")[0];
 const navClose = document.getElementsByClassName("nav-close")[0];
 
 navOpen.addEventListener("click", () => {
-  navOverlay.style.right = "0";
+  navOverlay.style.left = "0";
   document.body.classList.add("stop-scrolling");
 });
 navClose.addEventListener("click", () => {
-  navOverlay.style.right = "-100vw";
+  navOverlay.style.left = "-100vw";
   document.body.classList.remove("stop-scrolling");
 });

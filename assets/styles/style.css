@@ -270,7 +270,7 @@ header {
   height: 23px;
   position: absolute;
   top: 50%;
-  left: 40px;
+  right: 15px;
   transform: translate(-50%, -50%);
   cursor: pointer;
 }
@@ -307,7 +307,7 @@ header {
   height: 25px;
   position: absolute;
   top: 50%;
-  right: 15px;
+  left: 40px;
   display: flex;
   transform: translate(-50%, -50%);
   opacity: 1;
@@ -320,10 +320,10 @@ header {
   height: 100vh;
   position: fixed;
   top: 0;
-  left: -100vw;
+  right: -100vw;
   z-index: 9;
   background-color: #fff;
-  transition: left 0.3s;
+  transition: right 0.3s;
 }
 .cart-overlay .cart-container {
   width: 100%;
@@ -489,10 +489,10 @@ header {
   height: 100vh;
   position: fixed;
   top: 0;
-  right: -100vw;
+  left: -100vw;
   z-index: 9;
   background-color: rgba(30, 30, 30, 0.95);
-  transition: right 0.3s;
+  transition: left 0.3s;
 }
 .nav-overlay .nav-container {
   width: 100%;
@@ -586,7 +586,7 @@ header {
 .banner-txt {
   width: 85%;
   text-align: end;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .banner-txt p {
   font-size: calc(30px + 2vw);
@@ -1737,10 +1737,10 @@ footer .footer-navigation .legal p {
 /*TABLET*/
 @media only screen and (min-width: 750px) {
   .cart {
-    left: 60px;
+    right: 30px;
   }
   .hamburger {
-    right: 30px;
+    left: 60px;
   }
   .banner {
     height: 60vh;
@@ -1820,7 +1820,7 @@ footer .footer-navigation .legal p {
   .cart {
     width: 30px;
     height: 30px;
-    left: 80px;
+    right: 50px;
   }
   .cart .cart-container .cart-count {
     width: 25px;
@@ -1835,7 +1835,7 @@ footer .footer-navigation .legal p {
   .hamburger {
     width: 30px;
     height: 30px;
-    right: 50px;
+    left: 80px;
   }
   .banner {
     height: 100vh;
