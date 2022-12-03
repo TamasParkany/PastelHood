@@ -2,17 +2,17 @@
 const productTable = {
   f22ro: {
     name: "Real One",
-    price: 59.99,
+    price: 64.99,
     image: "/assets/images/real/real_front.JPG",
   },
   f22s: {
     name: "Slasher",
-    price: 59.99,
+    price: 64.99,
     image: "/assets/images/slasher/slasher_front_f.JPG",
   },
   f22lwu: {
     name: "LWU",
-    price: 59.99,
+    price: 64.99,
     image: "/assets/images/lost/lost_front_f.JPG",
   },
 };
@@ -173,7 +173,7 @@ function handleDecrement(e) {
     document.getElementsByClassName("cart-item-count")[target].innerText =
       cart[target].quantity;
     document.getElementsByClassName("cart-item-price")[target].innerText = `${(
-      cart[target].quantity * 59.99
+      cart[target].quantity * 64.99
     ).toFixed(2)}€`;
     localStorage.setItem("ph__cart", JSON.stringify(cart));
     updateTotal();
@@ -187,7 +187,7 @@ function handleIncrement(e) {
   document.getElementsByClassName("cart-item-count")[target].innerText =
     cart[target].quantity;
   document.getElementsByClassName("cart-item-price")[target].innerText = `${(
-    cart[target].quantity * 59.99
+    cart[target].quantity * 64.99
   ).toFixed(2)}€`;
   localStorage.setItem("ph__cart", JSON.stringify(cart));
   updateTotal();
@@ -210,7 +210,7 @@ function handleRemove(e) {
 function updateTotal() {
   const cartTotal = document.getElementsByClassName("cart-total-price")[0];
   const total = cart.reduce((acc, curr) => acc + curr.quantity, 0);
-  cartTotal.innerText = `${(total * 59.99).toFixed(2)}€`;
+  cartTotal.innerText = `${(total * 64.99).toFixed(2)}€`;
 }
 
 function updateCartCount() {
